@@ -2,7 +2,7 @@
 Imports System.Drawing
 Imports System.Windows.Forms
 
-Public Class CadastroProdutos
+Public Class CadastroProdutos 'Formulário para Cadastrar Produtos com Layout Profissional e Conexão com Banco de Dados SQL Server'
 
     Private ReadOnly connectionString As String =
         "Data Source=localhost;Initial Catalog=Testes;User ID=sa;Password=1104;Integrated Security=False"
@@ -12,25 +12,22 @@ Public Class CadastroProdutos
     Private lblTituloTela As Label
     Private lblSubtituloTela As Label
 
-    Private Sub CadastroProdutos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub CadastroProdutos_Load(sender As Object, e As EventArgs) Handles MyBase.Load 'Configura o Formulário ao Carregar a Tela'
         ConfigurarTela()
         MontarLayoutProfissional()
         AplicarTema()
         CentralizarConteudo()
     End Sub
 
-    Private Sub CadastroProdutos_Resize(sender As Object, e As EventArgs) Handles Me.Resize
+    Private Sub CadastroProdutos_Resize(sender As Object, e As EventArgs) Handles Me.Resize 'Recalcula o Layout para Manter o Formulário Centralizado e com Proporções Adequadas'
         CentralizarConteudo()
     End Sub
 
-    Private Sub VoltarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VoltarToolStripMenuItem.Click
+    Private Sub VoltarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VoltarToolStripMenuItem.Click 'Fecha o Formulário para Voltar à Tela Anterior'
         Close()
     End Sub
 
-
-
-
-    Private Sub ConfigurarTela()
+    Private Sub ConfigurarTela() 'Configura as Propriedades Básicas do Formulário'
         Me.BackColor = Color.FromArgb(226, 232, 240)
         Me.Font = New Font("Segoe UI", 9.0F)
         Me.StartPosition = FormStartPosition.CenterScreen
@@ -45,7 +42,7 @@ Public Class CadastroProdutos
         pnlConteudo.BorderStyle = BorderStyle.None
     End Sub
 
-    Private Sub MontarLayoutProfissional()
+    Private Sub MontarLayoutProfissional() 'Limpa o Painel de Conteúdo e Cria um Layout Profissional para o Formulário'
         pnlConteudo.Controls.Clear()
 
         CriarSombra()
@@ -163,7 +160,7 @@ Public Class CadastroProdutos
         pnlConteudo.BringToFront()
     End Sub
 
-    Private Sub CriarSombra()
+    Private Sub CriarSombra() 'Cria um Painel de Sombra para Dar Profundidade ao Layout'
         If pnlConteudo.Parent Is Nothing Then
             Return
         End If
@@ -180,7 +177,7 @@ Public Class CadastroProdutos
         AtualizarSombra()
     End Sub
 
-    Private Sub AtualizarSombra()
+    Private Sub AtualizarSombra() 'Posiciona a Sombra Atrás do Painel de Conteúdo'
         If pnlSombra Is Nothing OrElse pnlSombra.IsDisposed Then
             Return
         End If
@@ -194,7 +191,7 @@ Public Class CadastroProdutos
         pnlConteudo.BringToFront()
     End Sub
 
-    Private Sub CriarCabecalho()
+    Private Sub CriarCabecalho() 'Cria o Painel de Cabeçalho com Título e Subtítulo'
         pnlCabecalho = New Panel()
         pnlCabecalho.Name = "pnlCabecalho"
         pnlCabecalho.Left = 0
@@ -226,7 +223,7 @@ Public Class CadastroProdutos
         pnlCabecalho.BringToFront()
     End Sub
 
-    Private Sub CriarTituloSecao(texto As String, x As Integer, y As Integer)
+    Private Sub CriarTituloSecao(texto As String, x As Integer, y As Integer) 'Cria Títulos para as Seções do Formulário'
         Dim lbl As New Label()
         lbl.Text = texto
         lbl.AutoSize = True
@@ -238,7 +235,7 @@ Public Class CadastroProdutos
         pnlConteudo.Controls.Add(lbl)
     End Sub
 
-    Private Sub CriarLabelCampo(texto As String, x As Integer, y As Integer)
+    Private Sub CriarLabelCampo(texto As String, x As Integer, y As Integer) 'Cria um Label para Identificar os Campos de Texto'
         Dim lbl As New Label()
         lbl.Text = texto
         lbl.AutoSize = True
@@ -250,7 +247,7 @@ Public Class CadastroProdutos
         pnlConteudo.Controls.Add(lbl)
     End Sub
 
-    Private Sub CriarLinhaSeparadora(x As Integer, y As Integer, largura As Integer)
+    Private Sub CriarLinhaSeparadora(x As Integer, y As Integer, largura As Integer) 'Cria uma Linha Fina para Separar as Seções do Formulário'
         Dim linha As New Panel()
         linha.Left = x
         linha.Top = y
@@ -261,7 +258,7 @@ Public Class CadastroProdutos
         pnlConteudo.Controls.Add(linha)
     End Sub
 
-    Private Sub ConfigurarCampo(campo As TextBox, x As Integer, y As Integer, largura As Integer, altura As Integer)
+    Private Sub ConfigurarCampo(campo As TextBox, x As Integer, y As Integer, largura As Integer, altura As Integer) 'Configura o Estilo dos Campos de Texto'
         campo.Parent = pnlConteudo
         campo.Left = x
         campo.Top = y
@@ -273,7 +270,7 @@ Public Class CadastroProdutos
         campo.Font = New Font("Segoe UI", 9.0F)
     End Sub
 
-    Private Sub CentralizarConteudo()
+    Private Sub CentralizarConteudo() 'Centraliza o Painel do Formulário'
         If pnlConteudo Is Nothing OrElse pnlConteudo.Parent Is Nothing Then
             Return
         End If
@@ -287,13 +284,13 @@ Public Class CadastroProdutos
         AtualizarSombra()
     End Sub
 
-    Private Sub AplicarTema()
+    Private Sub AplicarTema() 'Aplica o Tema Personalizado'
         EstilizarBotaoPrimario(Button1)
         EstilizarBotaoSecundario(Button2)
         EstilizarLista()
     End Sub
 
-    Private Sub EstilizarBotaoPrimario(botao As Button)
+    Private Sub EstilizarBotaoPrimario(botao As Button) 'Define o Estilo do Botão Primário'
         botao.FlatStyle = FlatStyle.Flat
         botao.FlatAppearance.BorderSize = 0
         botao.BackColor = Color.FromArgb(37, 99, 235)
@@ -302,7 +299,7 @@ Public Class CadastroProdutos
         botao.Cursor = Cursors.Hand
     End Sub
 
-    Private Sub EstilizarBotaoSecundario(botao As Button)
+    Private Sub EstilizarBotaoSecundario(botao As Button) 'Define o Estilo do Botão Secundário'
         botao.FlatStyle = FlatStyle.Flat
         botao.FlatAppearance.BorderSize = 1
         botao.FlatAppearance.BorderColor = Color.FromArgb(203, 213, 225)
@@ -312,7 +309,7 @@ Public Class CadastroProdutos
         botao.Cursor = Cursors.Hand
     End Sub
 
-    Private Sub EstilizarLista()
+    Private Sub EstilizarLista() 'Deixa a Lista com o Mesmo Tema do Formulário'
         lista.BackColor = Color.FromArgb(248, 250, 252)
         lista.ForeColor = Color.FromArgb(15, 23, 42)
         lista.BorderStyle = BorderStyle.FixedSingle
@@ -320,7 +317,7 @@ Public Class CadastroProdutos
     End Sub
 
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click 'Cadastrando o Produto
         Dim nomeProduto As String = Me.nome.Text.Trim()
         Dim marcaProduto As String = Me.marca.Text.Trim()
         Dim modeloProduto As String = Me.modelo.Text.Trim()
@@ -407,7 +404,7 @@ Public Class CadastroProdutos
 
 
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click 'Botão de Mostrar os Produtos'
         lista.Visible = True
         lista.Items.Clear()
 
@@ -448,7 +445,7 @@ Public Class CadastroProdutos
     End Sub
 
 
-    Private Sub preço_KeyPress(sender As Object, e As KeyPressEventArgs) Handles preço.KeyPress, frete.KeyPress
+    Private Sub preço_KeyPress(sender As Object, e As KeyPressEventArgs) Handles preço.KeyPress, frete.KeyPress 'Bloqueia Outros Caracteres sem serem Numeros'
         If Not Char.IsDigit(e.KeyChar) AndAlso
            Not Char.IsControl(e.KeyChar) AndAlso
            e.KeyChar <> ","c AndAlso
@@ -458,7 +455,7 @@ Public Class CadastroProdutos
         End If
     End Sub
 
-    Private Sub LimparCampos()
+    Private Sub LimparCampos() 'Limpa os Campos Após o Cadastro'
         nome.Clear()
         marca.Clear()
         modelo.Clear()
