@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class CadastroProdutos
     Inherits System.Windows.Forms.Form
 
     'Descartar substituições de formulário para limpar a lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class CadastroProdutos
     'OBSERVAÇÃO: o procedimento a seguir é exigido pelo Windows Form Designer
     'Pode ser modificado usando o Windows Form Designer.  
     'Não o modifique usando o editor de códigos.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.VoltarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -136,7 +136,7 @@ Partial Class CadastroProdutos
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.35762!))
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.64238!))
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200.0!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 106.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 107.0!))
         Me.TableLayoutPanel2.Controls.Add(Me.Label4, 0, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.Label1, 0, 1)
         Me.TableLayoutPanel2.Controls.Add(Me.Label3, 1, 1)
@@ -195,7 +195,7 @@ Partial Class CadastroProdutos
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(456, 25)
+        Me.Label2.Location = New System.Drawing.Point(455, 25)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(42, 13)
         Me.Label2.TabIndex = 2
@@ -204,7 +204,7 @@ Partial Class CadastroProdutos
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(656, 25)
+        Me.Label13.Location = New System.Drawing.Point(655, 25)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(62, 13)
         Me.Label13.TabIndex = 13
@@ -226,14 +226,14 @@ Partial Class CadastroProdutos
         '
         'modelo
         '
-        Me.modelo.Location = New System.Drawing.Point(456, 53)
+        Me.modelo.Location = New System.Drawing.Point(455, 53)
         Me.modelo.Name = "modelo"
         Me.modelo.Size = New System.Drawing.Size(98, 20)
         Me.modelo.TabIndex = 20
         '
         'quantidade
         '
-        Me.quantidade.Location = New System.Drawing.Point(656, 53)
+        Me.quantidade.Location = New System.Drawing.Point(655, 53)
         Me.quantidade.Name = "quantidade"
         Me.quantidade.Size = New System.Drawing.Size(98, 20)
         Me.quantidade.TabIndex = 22
@@ -259,7 +259,7 @@ Partial Class CadastroProdutos
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(456, 76)
+        Me.Label8.Location = New System.Drawing.Point(455, 76)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(51, 13)
         Me.Label8.TabIndex = 8
@@ -268,7 +268,7 @@ Partial Class CadastroProdutos
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(656, 76)
+        Me.Label9.Location = New System.Drawing.Point(655, 76)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(72, 13)
         Me.Label9.TabIndex = 9
@@ -290,14 +290,14 @@ Partial Class CadastroProdutos
         '
         'voltagem
         '
-        Me.voltagem.Location = New System.Drawing.Point(456, 111)
+        Me.voltagem.Location = New System.Drawing.Point(455, 111)
         Me.voltagem.Name = "voltagem"
         Me.voltagem.Size = New System.Drawing.Size(98, 20)
         Me.voltagem.TabIndex = 25
         '
         'componentes
         '
-        Me.componentes.Location = New System.Drawing.Point(656, 111)
+        Me.componentes.Location = New System.Drawing.Point(655, 111)
         Me.componentes.Name = "componentes"
         Me.componentes.Size = New System.Drawing.Size(98, 20)
         Me.componentes.TabIndex = 26
@@ -350,7 +350,7 @@ Partial Class CadastroProdutos
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.47577!))
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.52423!))
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 199.0!))
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 106.0!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 107.0!))
         Me.TableLayoutPanel3.Controls.Add(Me.Label18, 0, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.Label6, 0, 1)
         Me.TableLayoutPanel3.Controls.Add(Me.Label14, 1, 1)
