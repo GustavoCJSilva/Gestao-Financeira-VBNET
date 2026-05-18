@@ -30,15 +30,15 @@ Public Class Cadastro_CltxtDataNascimentoientes
 
     End Sub
 
-    Private Sub txtEstado(sender As Object, e As EventArgs) Handles txtEstados.TextChanged
+    Private Sub txtEstado(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub txtCidade(sender As Object, e As EventArgs) Handles txtCidades.TextChanged
+    Private Sub txtCidade(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub lstClientes(sender As Object, e As EventArgs) Handles lstCliente.SelectedIndexChanged
+    Private Sub lstClientes(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -59,7 +59,7 @@ Public Class Cadastro_CltxtDataNascimentoientes
                             "Cidade: " & cidade & " | " &
                             "Contato:" & Contato
 
-        lstCliente.Items.Add(cliente)
+
 
         If String.IsNullOrEmpty(nome) Or
             String.IsNullOrEmpty(sobrenome) Or
@@ -113,7 +113,7 @@ Public Class Cadastro_CltxtDataNascimentoientes
 
     Private Sub Cadastros_Click(sender As Object, e As EventArgs) Handles Cadastros.Click
 
-        lstCliente.Visible = True
+
         CarregarClientes()
     End Sub
 
@@ -122,7 +122,7 @@ Public Class Cadastro_CltxtDataNascimentoientes
     End Sub
 
     Private Sub CarregarClientes()
-        lstCliente.Items.Clear()
+
         Dim connectionString As String = "Data Source=localhost;Initial Catalog=Testes;User ID=sa;Password=1104;Integrated Security=False"
         Dim sql As String = "SELECT Nome, Sobrenome, Datanascimento, Cpf, Estado, Cidade, Contato FROM CadastroClientes"
 
@@ -140,7 +140,7 @@ Public Class Cadastro_CltxtDataNascimentoientes
                                 "Estado: " & Reader("Estado").ToString() & " | " &
                                 "Cidade: " & Reader("Cidade").ToString() & " | " &
                                 "Contato: " & Reader("Contato").ToString()
-                            lstCliente.Items.Add(cliente)
+
                         End While
                     End Using
                 Catch ex As Exception
