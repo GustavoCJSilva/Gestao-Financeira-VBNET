@@ -56,6 +56,9 @@ Partial Class Menu
         Me.SobreOSistemaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ManualDeUsoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.FornecedoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CategoriasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UsuáriosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -71,7 +74,7 @@ Partial Class Menu
         '
         'CadastrosToolStripMenuItem
         '
-        Me.CadastrosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CadastroClientesToolStripMenuItem1, Me.CadastroProdutosToolStripMenuItem1})
+        Me.CadastrosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CadastroClientesToolStripMenuItem1, Me.CadastroProdutosToolStripMenuItem1, Me.FornecedoresToolStripMenuItem, Me.CategoriasToolStripMenuItem, Me.UsuáriosToolStripMenuItem})
         Me.CadastrosToolStripMenuItem.Name = "CadastrosToolStripMenuItem"
         Me.CadastrosToolStripMenuItem.Size = New System.Drawing.Size(71, 20)
         Me.CadastrosToolStripMenuItem.Text = "Cadastros"
@@ -80,13 +83,13 @@ Partial Class Menu
         '
         Me.CadastroClientesToolStripMenuItem1.Name = "CadastroClientesToolStripMenuItem1"
         Me.CadastroClientesToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
-        Me.CadastroClientesToolStripMenuItem1.Text = "Cadastro Clientes"
+        Me.CadastroClientesToolStripMenuItem1.Text = "Clientes"
         '
         'CadastroProdutosToolStripMenuItem1
         '
         Me.CadastroProdutosToolStripMenuItem1.Name = "CadastroProdutosToolStripMenuItem1"
         Me.CadastroProdutosToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
-        Me.CadastroProdutosToolStripMenuItem1.Text = "Cadastro Produtos"
+        Me.CadastroProdutosToolStripMenuItem1.Text = "Produtos"
         '
         'VendasToolStripMenuItem
         '
@@ -98,19 +101,19 @@ Partial Class Menu
         'NovaVendaToolStripMenuItem
         '
         Me.NovaVendaToolStripMenuItem.Name = "NovaVendaToolStripMenuItem"
-        Me.NovaVendaToolStripMenuItem.Size = New System.Drawing.Size(178, 22)
+        Me.NovaVendaToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.NovaVendaToolStripMenuItem.Text = "Nova Venda"
         '
         'HistóricoDeVendasToolStripMenuItem
         '
         Me.HistóricoDeVendasToolStripMenuItem.Name = "HistóricoDeVendasToolStripMenuItem"
-        Me.HistóricoDeVendasToolStripMenuItem.Size = New System.Drawing.Size(178, 22)
+        Me.HistóricoDeVendasToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.HistóricoDeVendasToolStripMenuItem.Text = "Histórico de Vendas"
         '
         'CancelarVendaToolStripMenuItem
         '
         Me.CancelarVendaToolStripMenuItem.Name = "CancelarVendaToolStripMenuItem"
-        Me.CancelarVendaToolStripMenuItem.Size = New System.Drawing.Size(178, 22)
+        Me.CancelarVendaToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.CancelarVendaToolStripMenuItem.Text = "Cancelar Venda"
         '
         'EstoqueToolStripMenuItem
@@ -273,6 +276,24 @@ Partial Class Menu
         Me.PictureBox1.TabIndex = 1
         Me.PictureBox1.TabStop = False
         '
+        'FornecedoresToolStripMenuItem
+        '
+        Me.FornecedoresToolStripMenuItem.Name = "FornecedoresToolStripMenuItem"
+        Me.FornecedoresToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.FornecedoresToolStripMenuItem.Text = "Fornecedores"
+        '
+        'CategoriasToolStripMenuItem
+        '
+        Me.CategoriasToolStripMenuItem.Name = "CategoriasToolStripMenuItem"
+        Me.CategoriasToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CategoriasToolStripMenuItem.Text = "Categorias"
+        '
+        'UsuáriosToolStripMenuItem
+        '
+        Me.UsuáriosToolStripMenuItem.Name = "UsuáriosToolStripMenuItem"
+        Me.UsuáriosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.UsuáriosToolStripMenuItem.Text = "Usuários"
+        '
         'Menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -324,4 +345,7 @@ Partial Class Menu
     Friend WithEvents AjudaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SobreOSistemaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ManualDeUsoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents FornecedoresToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CategoriasToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents UsuáriosToolStripMenuItem As ToolStripMenuItem
 End Class
