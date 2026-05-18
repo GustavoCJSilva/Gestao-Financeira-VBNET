@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <StartupObject>Cadastros.My.MyApplication</StartupObject>
     <RootNamespace>Cadastros</RootNamespace>
-    <AssemblyName>Cadastros</AssemblyName>
+    <AssemblyName>Aplicativo 1</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
@@ -24,7 +24,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>Cadastros.xml</DocumentationFile>
+    <DocumentationFile>Aplicativo 1.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -34,7 +34,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>Cadastros.xml</DocumentationFile>
+    <DocumentationFile>Aplicativo 1.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -93,16 +93,16 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CadastroClientes.Designer.vb">
+    <Compile Include="Cadastro\CadastroClientes.Designer.vb">
       <DependentUpon>CadastroClientes.vb</DependentUpon>
     </Compile>
-    <Compile Include="CadastroClientes.vb">
+    <Compile Include="Cadastro\CadastroClientes.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CadastroProdutos.Designer.vb">
+    <Compile Include="Cadastro\CadastroProdutos.Designer.vb">
       <DependentUpon>CadastroProdutos.vb</DependentUpon>
     </Compile>
-    <Compile Include="CadastroProdutos.vb">
+    <Compile Include="Cadastro\CadastroProdutos.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Entidades\ConexaoDB.vb">
@@ -130,12 +130,18 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Vendas\Nova-Venda.Designer.vb">
+      <DependentUpon>Nova-Venda.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vendas\Nova-Venda.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="CadastroClientes.resx">
+    <EmbeddedResource Include="Cadastro\CadastroClientes.resx">
       <DependentUpon>CadastroClientes.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CadastroProdutos.resx">
+    <EmbeddedResource Include="Cadastro\CadastroProdutos.resx">
       <DependentUpon>CadastroProdutos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
@@ -164,6 +170,7 @@
   <ItemGroup>
     <Compile Include="ValueObjects\ValidadorCPF.vb" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Import Project="..\packages\System.ValueTuple.4.6.2\build\net471\System.ValueTuple.targets" Condition="Exists('..\packages\System.ValueTuple.4.6.2\build\net471\System.ValueTuple.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
