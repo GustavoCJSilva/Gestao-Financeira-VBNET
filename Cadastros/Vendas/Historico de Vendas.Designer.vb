@@ -31,36 +31,33 @@ Partial Class Historico_de_Vendas
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.cmbClienteFiltro = New System.Windows.Forms.ComboBox()
+        Me.dtpDataInicial = New System.Windows.Forms.DateTimePicker()
+        Me.dtpDataFinal = New System.Windows.Forms.DateTimePicker()
+        Me.cmbFormaPagamento = New System.Windows.Forms.ComboBox()
+        Me.cmbStatus = New System.Windows.Forms.ComboBox()
+        Me.btnBuscar = New System.Windows.Forms.Button()
+        Me.btnCancelarVenda = New System.Windows.Forms.Button()
+        Me.btnAtualizar = New System.Windows.Forms.Button()
+        Me.btnVoltar = New System.Windows.Forms.Button()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button7 = New System.Windows.Forms.Button()
-        Me.Button8 = New System.Windows.Forms.Button()
+        Me.txtTotalVendas = New System.Windows.Forms.TextBox()
+        Me.txtValorTotal = New System.Windows.Forms.TextBox()
+        Me.txtVendasCanceladas = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.dgvVendas = New System.Windows.Forms.DataGridView()
         Me.MenuStrip1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        CType(Me.dgvVendas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -76,7 +73,7 @@ Partial Class Historico_de_Vendas
         'VoltarToolStripMenuItem
         '
         Me.VoltarToolStripMenuItem.Name = "VoltarToolStripMenuItem"
-        Me.VoltarToolStripMenuItem.Size = New System.Drawing.Size(49, 20)
+        Me.VoltarToolStripMenuItem.Size = New System.Drawing.Size(49, 19)
         Me.VoltarToolStripMenuItem.Text = "Voltar"
         '
         'TableLayoutPanel1
@@ -87,18 +84,18 @@ Partial Class Historico_de_Vendas
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60.57692!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 216.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 189.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 142.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 144.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label2, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Label3, 1, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Label4, 2, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Label5, 3, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Label6, 4, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.ComboBox1, 0, 2)
-        Me.TableLayoutPanel1.Controls.Add(Me.DateTimePicker1, 1, 2)
-        Me.TableLayoutPanel1.Controls.Add(Me.DateTimePicker2, 2, 2)
-        Me.TableLayoutPanel1.Controls.Add(Me.ComboBox2, 3, 2)
-        Me.TableLayoutPanel1.Controls.Add(Me.ComboBox3, 4, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.cmbClienteFiltro, 0, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.dtpDataInicial, 1, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.dtpDataFinal, 2, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.cmbFormaPagamento, 3, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.cmbStatus, 4, 2)
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(15, 12)
         Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
@@ -130,7 +127,7 @@ Partial Class Historico_de_Vendas
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(144, 47)
+        Me.Label3.Location = New System.Drawing.Point(143, 47)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(86, 21)
         Me.Label3.TabIndex = 2
@@ -139,7 +136,7 @@ Partial Class Historico_de_Vendas
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(361, 47)
+        Me.Label4.Location = New System.Drawing.Point(359, 47)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(79, 21)
         Me.Label4.TabIndex = 3
@@ -148,7 +145,7 @@ Partial Class Historico_de_Vendas
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(577, 47)
+        Me.Label5.Location = New System.Drawing.Point(575, 47)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(158, 21)
         Me.Label5.TabIndex = 4
@@ -157,96 +154,96 @@ Partial Class Historico_de_Vendas
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(766, 47)
+        Me.Label6.Location = New System.Drawing.Point(764, 47)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(52, 21)
         Me.Label6.TabIndex = 5
         Me.Label6.Text = "Status"
         '
-        'ComboBox1
+        'cmbClienteFiltro
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(3, 109)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 29)
-        Me.ComboBox1.TabIndex = 6
+        Me.cmbClienteFiltro.FormattingEnabled = True
+        Me.cmbClienteFiltro.Location = New System.Drawing.Point(3, 109)
+        Me.cmbClienteFiltro.Name = "cmbClienteFiltro"
+        Me.cmbClienteFiltro.Size = New System.Drawing.Size(121, 29)
+        Me.cmbClienteFiltro.TabIndex = 6
         '
-        'DateTimePicker1
+        'dtpDataInicial
         '
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(144, 109)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 29)
-        Me.DateTimePicker1.TabIndex = 7
+        Me.dtpDataInicial.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpDataInicial.Location = New System.Drawing.Point(143, 109)
+        Me.dtpDataInicial.Name = "dtpDataInicial"
+        Me.dtpDataInicial.Size = New System.Drawing.Size(200, 29)
+        Me.dtpDataInicial.TabIndex = 7
         '
-        'DateTimePicker2
+        'dtpDataFinal
         '
-        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker2.Location = New System.Drawing.Point(361, 109)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(200, 29)
-        Me.DateTimePicker2.TabIndex = 8
+        Me.dtpDataFinal.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpDataFinal.Location = New System.Drawing.Point(359, 109)
+        Me.dtpDataFinal.Name = "dtpDataFinal"
+        Me.dtpDataFinal.Size = New System.Drawing.Size(200, 29)
+        Me.dtpDataFinal.TabIndex = 8
         '
-        'ComboBox2
+        'cmbFormaPagamento
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(577, 109)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(121, 29)
-        Me.ComboBox2.TabIndex = 9
+        Me.cmbFormaPagamento.FormattingEnabled = True
+        Me.cmbFormaPagamento.Location = New System.Drawing.Point(575, 109)
+        Me.cmbFormaPagamento.Name = "cmbFormaPagamento"
+        Me.cmbFormaPagamento.Size = New System.Drawing.Size(121, 29)
+        Me.cmbFormaPagamento.TabIndex = 9
         '
-        'ComboBox3
+        'cmbStatus
         '
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(766, 109)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(121, 29)
-        Me.ComboBox3.TabIndex = 10
+        Me.cmbStatus.FormattingEnabled = True
+        Me.cmbStatus.Location = New System.Drawing.Point(764, 109)
+        Me.cmbStatus.Name = "cmbStatus"
+        Me.cmbStatus.Size = New System.Drawing.Size(121, 29)
+        Me.cmbStatus.TabIndex = 10
         '
-        'Button1
+        'btnBuscar
         '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(15, 182)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(202, 44)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Buscar"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBuscar.ForeColor = System.Drawing.Color.White
+        Me.btnBuscar.Location = New System.Drawing.Point(15, 182)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(202, 44)
+        Me.btnBuscar.TabIndex = 2
+        Me.btnBuscar.Text = "Buscar"
+        Me.btnBuscar.UseVisualStyleBackColor = False
         '
-        'Button2
+        'btnCancelarVenda
         '
-        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Location = New System.Drawing.Point(253, 182)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(202, 44)
-        Me.Button2.TabIndex = 3
-        Me.Button2.Text = "Cancelar Venda"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btnCancelarVenda.BackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.btnCancelarVenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCancelarVenda.Location = New System.Drawing.Point(253, 182)
+        Me.btnCancelarVenda.Name = "btnCancelarVenda"
+        Me.btnCancelarVenda.Size = New System.Drawing.Size(202, 44)
+        Me.btnCancelarVenda.TabIndex = 3
+        Me.btnCancelarVenda.Text = "Cancelar Venda"
+        Me.btnCancelarVenda.UseVisualStyleBackColor = False
         '
-        'Button3
+        'btnAtualizar
         '
-        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Location = New System.Drawing.Point(483, 182)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(202, 44)
-        Me.Button3.TabIndex = 4
-        Me.Button3.Text = "Atualizar"
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.btnAtualizar.BackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.btnAtualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAtualizar.Location = New System.Drawing.Point(483, 182)
+        Me.btnAtualizar.Name = "btnAtualizar"
+        Me.btnAtualizar.Size = New System.Drawing.Size(202, 44)
+        Me.btnAtualizar.TabIndex = 4
+        Me.btnAtualizar.Text = "Atualizar"
+        Me.btnAtualizar.UseVisualStyleBackColor = False
         '
-        'Button4
+        'btnVoltar
         '
-        Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Location = New System.Drawing.Point(719, 182)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(202, 44)
-        Me.Button4.TabIndex = 5
-        Me.Button4.Text = "Voltar"
-        Me.Button4.UseVisualStyleBackColor = False
+        Me.btnVoltar.BackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnVoltar.Location = New System.Drawing.Point(719, 182)
+        Me.btnVoltar.Name = "btnVoltar"
+        Me.btnVoltar.Size = New System.Drawing.Size(202, 44)
+        Me.btnVoltar.TabIndex = 5
+        Me.btnVoltar.Text = "Voltar"
+        Me.btnVoltar.UseVisualStyleBackColor = False
         '
         'TableLayoutPanel2
         '
@@ -254,7 +251,7 @@ Partial Class Historico_de_Vendas
         Me.TableLayoutPanel2.ColumnCount = 1
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel2.Controls.Add(Me.Label7, 0, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.TextBox1, 0, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.dgvVendas, 0, 1)
         Me.TableLayoutPanel2.Location = New System.Drawing.Point(15, 241)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 2
@@ -272,35 +269,27 @@ Partial Class Historico_de_Vendas
         Me.Label7.TabIndex = 0
         Me.Label7.Text = "🧾 Vendas Encontradas"
         '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(3, 31)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(900, 112)
-        Me.TextBox1.TabIndex = 1
-        '
         'TableLayoutPanel3
         '
         Me.TableLayoutPanel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(252, Byte), Integer))
         Me.TableLayoutPanel3.ColumnCount = 3
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.95597!))
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.04403!))
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 269.0!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 271.0!))
         Me.TableLayoutPanel3.Controls.Add(Me.Label8, 0, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.Label9, 0, 1)
         Me.TableLayoutPanel3.Controls.Add(Me.Label10, 1, 1)
         Me.TableLayoutPanel3.Controls.Add(Me.Label11, 2, 1)
-        Me.TableLayoutPanel3.Controls.Add(Me.TextBox2, 0, 2)
-        Me.TableLayoutPanel3.Controls.Add(Me.TextBox3, 1, 2)
-        Me.TableLayoutPanel3.Controls.Add(Me.TextBox4, 2, 2)
+        Me.TableLayoutPanel3.Controls.Add(Me.txtTotalVendas, 0, 2)
+        Me.TableLayoutPanel3.Controls.Add(Me.txtValorTotal, 1, 2)
+        Me.TableLayoutPanel3.Controls.Add(Me.txtVendasCanceladas, 2, 2)
         Me.TableLayoutPanel3.Location = New System.Drawing.Point(15, 393)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
         Me.TableLayoutPanel3.RowCount = 3
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.82759!))
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.17241!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34.0!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(906, 122)
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53.0!))
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(906, 185)
         Me.TableLayoutPanel3.TabIndex = 7
         '
         'Label8
@@ -315,7 +304,7 @@ Partial Class Historico_de_Vendas
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(3, 39)
+        Me.Label9.Location = New System.Drawing.Point(3, 59)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(117, 21)
         Me.Label9.TabIndex = 1
@@ -324,7 +313,7 @@ Partial Class Historico_de_Vendas
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(308, 39)
+        Me.Label10.Location = New System.Drawing.Point(307, 59)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(82, 21)
         Me.Label10.TabIndex = 2
@@ -333,95 +322,55 @@ Partial Class Historico_de_Vendas
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(639, 39)
+        Me.Label11.Location = New System.Drawing.Point(637, 59)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(142, 21)
         Me.Label11.TabIndex = 3
         Me.Label11.Text = "Vendas Canceladas"
         '
-        'TextBox2
+        'txtTotalVendas
         '
-        Me.TextBox2.Location = New System.Drawing.Point(3, 90)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 29)
-        Me.TextBox2.TabIndex = 4
+        Me.txtTotalVendas.Location = New System.Drawing.Point(3, 134)
+        Me.txtTotalVendas.Name = "txtTotalVendas"
+        Me.txtTotalVendas.Size = New System.Drawing.Size(100, 29)
+        Me.txtTotalVendas.TabIndex = 4
         '
-        'TextBox3
+        'txtValorTotal
         '
-        Me.TextBox3.Location = New System.Drawing.Point(308, 90)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 29)
-        Me.TextBox3.TabIndex = 5
+        Me.txtValorTotal.Location = New System.Drawing.Point(307, 134)
+        Me.txtValorTotal.Name = "txtValorTotal"
+        Me.txtValorTotal.Size = New System.Drawing.Size(100, 29)
+        Me.txtValorTotal.TabIndex = 5
         '
-        'TextBox4
+        'txtVendasCanceladas
         '
-        Me.TextBox4.Location = New System.Drawing.Point(639, 90)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(100, 29)
-        Me.TextBox4.TabIndex = 6
-        '
-        'Button5
-        '
-        Me.Button5.BackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button5.Location = New System.Drawing.Point(15, 521)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(202, 44)
-        Me.Button5.TabIndex = 8
-        Me.Button5.Text = "Ver Detalhes"
-        Me.Button5.UseVisualStyleBackColor = False
-        '
-        'Button6
-        '
-        Me.Button6.BackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button6.Location = New System.Drawing.Point(253, 521)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(202, 44)
-        Me.Button6.TabIndex = 9
-        Me.Button6.Text = "Cancelar Venda"
-        Me.Button6.UseVisualStyleBackColor = False
-        '
-        'Button7
-        '
-        Me.Button7.BackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button7.Location = New System.Drawing.Point(483, 521)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(202, 44)
-        Me.Button7.TabIndex = 10
-        Me.Button7.Text = "Atualizar"
-        Me.Button7.UseVisualStyleBackColor = False
-        '
-        'Button8
-        '
-        Me.Button8.BackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button8.Location = New System.Drawing.Point(719, 521)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(202, 44)
-        Me.Button8.TabIndex = 11
-        Me.Button8.Text = "Voltar"
-        Me.Button8.UseVisualStyleBackColor = False
+        Me.txtVendasCanceladas.Location = New System.Drawing.Point(637, 134)
+        Me.txtVendasCanceladas.Name = "txtVendasCanceladas"
+        Me.txtVendasCanceladas.Size = New System.Drawing.Size(100, 29)
+        Me.txtVendasCanceladas.TabIndex = 6
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
-        Me.Panel1.Controls.Add(Me.Button8)
         Me.Panel1.Controls.Add(Me.TableLayoutPanel1)
-        Me.Panel1.Controls.Add(Me.Button7)
-        Me.Panel1.Controls.Add(Me.Button1)
-        Me.Panel1.Controls.Add(Me.Button6)
-        Me.Panel1.Controls.Add(Me.Button2)
-        Me.Panel1.Controls.Add(Me.Button5)
-        Me.Panel1.Controls.Add(Me.Button3)
+        Me.Panel1.Controls.Add(Me.btnBuscar)
+        Me.Panel1.Controls.Add(Me.btnCancelarVenda)
+        Me.Panel1.Controls.Add(Me.btnAtualizar)
         Me.Panel1.Controls.Add(Me.TableLayoutPanel3)
-        Me.Panel1.Controls.Add(Me.Button4)
+        Me.Panel1.Controls.Add(Me.btnVoltar)
         Me.Panel1.Controls.Add(Me.TableLayoutPanel2)
         Me.Panel1.Location = New System.Drawing.Point(61, 28)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(937, 598)
         Me.Panel1.TabIndex = 12
+        '
+        'dgvVendas
+        '
+        Me.dgvVendas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvVendas.Location = New System.Drawing.Point(3, 31)
+        Me.dgvVendas.Name = "dgvVendas"
+        Me.dgvVendas.Size = New System.Drawing.Size(900, 112)
+        Me.dgvVendas.TabIndex = 1
         '
         'Historico_de_Vendas
         '
@@ -446,6 +395,7 @@ Partial Class Historico_de_Vendas
         Me.TableLayoutPanel3.ResumeLayout(False)
         Me.TableLayoutPanel3.PerformLayout()
         Me.Panel1.ResumeLayout(False)
+        CType(Me.dgvVendas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -460,29 +410,25 @@ Partial Class Historico_de_Vendas
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents DateTimePicker2 As DateTimePicker
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents ComboBox3 As ComboBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
+    Friend WithEvents cmbClienteFiltro As ComboBox
+    Friend WithEvents dtpDataInicial As DateTimePicker
+    Friend WithEvents dtpDataFinal As DateTimePicker
+    Friend WithEvents cmbFormaPagamento As ComboBox
+    Friend WithEvents cmbStatus As ComboBox
+    Friend WithEvents btnBuscar As Button
+    Friend WithEvents btnCancelarVenda As Button
+    Friend WithEvents btnAtualizar As Button
+    Friend WithEvents btnVoltar As Button
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents Label7 As Label
-    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label11 As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button6 As Button
-    Friend WithEvents Button7 As Button
-    Friend WithEvents Button8 As Button
+    Friend WithEvents txtTotalVendas As TextBox
+    Friend WithEvents txtValorTotal As TextBox
+    Friend WithEvents txtVendasCanceladas As TextBox
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents dgvVendas As DataGridView
 End Class

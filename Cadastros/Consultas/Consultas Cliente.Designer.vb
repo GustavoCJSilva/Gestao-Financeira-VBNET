@@ -28,35 +28,36 @@ Partial Class Consultas_Cliente
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.txtNomeFiltro = New System.Windows.Forms.TextBox()
+        Me.txtCpfCnpjFiltro = New System.Windows.Forms.TextBox()
+        Me.txtCidadeFiltro = New System.Windows.Forms.TextBox()
+        Me.cmbStatusFiltro = New System.Windows.Forms.ComboBox()
+        Me.btnBuscar = New System.Windows.Forms.Button()
+        Me.btnLimparFiltro = New System.Windows.Forms.Button()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
+        Me.txtTotalClientes = New System.Windows.Forms.TextBox()
+        Me.txtClientesAtivos = New System.Windows.Forms.TextBox()
+        Me.txtClientesInativos = New System.Windows.Forms.TextBox()
+        Me.btnVerDetalhes = New System.Windows.Forms.Button()
+        Me.btnAtualizar = New System.Windows.Forms.Button()
+        Me.btnExcluir = New System.Windows.Forms.Button()
+        Me.btnEditar = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.VoltarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.dgvClientes = New System.Windows.Forms.DataGridView()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
+        CType(Me.dgvClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TableLayoutPanel1
@@ -66,16 +67,16 @@ Partial Class Consultas_Cliente
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.41253!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.58747!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 236.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 134.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 135.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label2, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Label3, 1, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Label4, 2, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Label5, 3, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.TextBox1, 0, 2)
-        Me.TableLayoutPanel1.Controls.Add(Me.TextBox2, 1, 2)
-        Me.TableLayoutPanel1.Controls.Add(Me.TextBox3, 2, 2)
-        Me.TableLayoutPanel1.Controls.Add(Me.ComboBox1, 3, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.txtNomeFiltro, 0, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.txtCpfCnpjFiltro, 1, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.txtCidadeFiltro, 2, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.cmbStatusFiltro, 3, 2)
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(25, 28)
         Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
@@ -131,57 +132,57 @@ Partial Class Consultas_Cliente
         Me.Label5.TabIndex = 4
         Me.Label5.Text = "Status"
         '
-        'TextBox1
+        'txtNomeFiltro
         '
-        Me.TextBox1.Location = New System.Drawing.Point(3, 90)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 29)
-        Me.TextBox1.TabIndex = 5
+        Me.txtNomeFiltro.Location = New System.Drawing.Point(3, 90)
+        Me.txtNomeFiltro.Name = "txtNomeFiltro"
+        Me.txtNomeFiltro.Size = New System.Drawing.Size(100, 29)
+        Me.txtNomeFiltro.TabIndex = 5
         '
-        'TextBox2
+        'txtCpfCnpjFiltro
         '
-        Me.TextBox2.Location = New System.Drawing.Point(204, 90)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 29)
-        Me.TextBox2.TabIndex = 6
+        Me.txtCpfCnpjFiltro.Location = New System.Drawing.Point(204, 90)
+        Me.txtCpfCnpjFiltro.Name = "txtCpfCnpjFiltro"
+        Me.txtCpfCnpjFiltro.Size = New System.Drawing.Size(100, 29)
+        Me.txtCpfCnpjFiltro.TabIndex = 6
         '
-        'TextBox3
+        'txtCidadeFiltro
         '
-        Me.TextBox3.Location = New System.Drawing.Point(466, 90)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 29)
-        Me.TextBox3.TabIndex = 7
+        Me.txtCidadeFiltro.Location = New System.Drawing.Point(466, 90)
+        Me.txtCidadeFiltro.Name = "txtCidadeFiltro"
+        Me.txtCidadeFiltro.Size = New System.Drawing.Size(100, 29)
+        Me.txtCidadeFiltro.TabIndex = 7
         '
-        'ComboBox1
+        'cmbStatusFiltro
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(702, 90)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 29)
-        Me.ComboBox1.TabIndex = 8
+        Me.cmbStatusFiltro.FormattingEnabled = True
+        Me.cmbStatusFiltro.Location = New System.Drawing.Point(702, 90)
+        Me.cmbStatusFiltro.Name = "cmbStatusFiltro"
+        Me.cmbStatusFiltro.Size = New System.Drawing.Size(121, 29)
+        Me.cmbStatusFiltro.TabIndex = 8
         '
-        'Button1
+        'btnBuscar
         '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(24, 172)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(148, 34)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Buscar"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBuscar.ForeColor = System.Drawing.Color.White
+        Me.btnBuscar.Location = New System.Drawing.Point(24, 172)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(148, 34)
+        Me.btnBuscar.TabIndex = 1
+        Me.btnBuscar.Text = "Buscar"
+        Me.btnBuscar.UseVisualStyleBackColor = False
         '
-        'Button2
+        'btnLimparFiltro
         '
-        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Location = New System.Drawing.Point(711, 172)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(148, 34)
-        Me.Button2.TabIndex = 2
-        Me.Button2.Text = "Limpar"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btnLimparFiltro.BackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.btnLimparFiltro.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnLimparFiltro.Location = New System.Drawing.Point(711, 172)
+        Me.btnLimparFiltro.Name = "btnLimparFiltro"
+        Me.btnLimparFiltro.Size = New System.Drawing.Size(148, 34)
+        Me.btnLimparFiltro.TabIndex = 2
+        Me.btnLimparFiltro.Text = "Limpar"
+        Me.btnLimparFiltro.UseVisualStyleBackColor = False
         '
         'TableLayoutPanel2
         '
@@ -189,7 +190,7 @@ Partial Class Consultas_Cliente
         Me.TableLayoutPanel2.ColumnCount = 1
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.50614!))
         Me.TableLayoutPanel2.Controls.Add(Me.Label6, 0, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.TextBox4, 0, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.dgvClientes, 0, 1)
         Me.TableLayoutPanel2.Location = New System.Drawing.Point(24, 212)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 2
@@ -207,28 +208,20 @@ Partial Class Consultas_Cliente
         Me.Label6.TabIndex = 0
         Me.Label6.Text = "👥 Clientes Encontrados"
         '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(3, 29)
-        Me.TextBox4.Multiline = True
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(829, 130)
-        Me.TextBox4.TabIndex = 1
-        '
         'TableLayoutPanel3
         '
         Me.TableLayoutPanel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(252, Byte), Integer))
         Me.TableLayoutPanel3.ColumnCount = 3
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.71429!))
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.28571!))
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 274.0!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 275.0!))
         Me.TableLayoutPanel3.Controls.Add(Me.Label7, 0, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.Label8, 0, 1)
         Me.TableLayoutPanel3.Controls.Add(Me.Label9, 1, 1)
         Me.TableLayoutPanel3.Controls.Add(Me.Label10, 2, 1)
-        Me.TableLayoutPanel3.Controls.Add(Me.TextBox5, 0, 2)
-        Me.TableLayoutPanel3.Controls.Add(Me.TextBox6, 1, 2)
-        Me.TableLayoutPanel3.Controls.Add(Me.TextBox7, 2, 2)
+        Me.TableLayoutPanel3.Controls.Add(Me.txtTotalClientes, 0, 2)
+        Me.TableLayoutPanel3.Controls.Add(Me.txtClientesAtivos, 1, 2)
+        Me.TableLayoutPanel3.Controls.Add(Me.txtClientesInativos, 2, 2)
         Me.TableLayoutPanel3.Location = New System.Drawing.Point(24, 380)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
         Me.TableLayoutPanel3.RowCount = 3
@@ -268,90 +261,90 @@ Partial Class Consultas_Cliente
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(563, 31)
+        Me.Label10.Location = New System.Drawing.Point(562, 31)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(123, 21)
         Me.Label10.TabIndex = 3
         Me.Label10.Text = "Clientes Inativos"
         '
-        'TextBox5
+        'txtTotalClientes
         '
-        Me.TextBox5.Location = New System.Drawing.Point(3, 81)
-        Me.TextBox5.Multiline = True
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(278, 48)
-        Me.TextBox5.TabIndex = 4
+        Me.txtTotalClientes.Location = New System.Drawing.Point(3, 81)
+        Me.txtTotalClientes.Multiline = True
+        Me.txtTotalClientes.Name = "txtTotalClientes"
+        Me.txtTotalClientes.Size = New System.Drawing.Size(278, 48)
+        Me.txtTotalClientes.TabIndex = 4
         '
-        'TextBox6
+        'txtClientesAtivos
         '
-        Me.TextBox6.Location = New System.Drawing.Point(287, 81)
-        Me.TextBox6.Multiline = True
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(270, 48)
-        Me.TextBox6.TabIndex = 5
+        Me.txtClientesAtivos.Location = New System.Drawing.Point(287, 81)
+        Me.txtClientesAtivos.Multiline = True
+        Me.txtClientesAtivos.Name = "txtClientesAtivos"
+        Me.txtClientesAtivos.Size = New System.Drawing.Size(269, 48)
+        Me.txtClientesAtivos.TabIndex = 5
         '
-        'TextBox7
+        'txtClientesInativos
         '
-        Me.TextBox7.Location = New System.Drawing.Point(563, 81)
-        Me.TextBox7.Multiline = True
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(269, 48)
-        Me.TextBox7.TabIndex = 6
+        Me.txtClientesInativos.Location = New System.Drawing.Point(562, 81)
+        Me.txtClientesInativos.Multiline = True
+        Me.txtClientesInativos.Name = "txtClientesInativos"
+        Me.txtClientesInativos.Size = New System.Drawing.Size(269, 48)
+        Me.txtClientesInativos.TabIndex = 6
         '
-        'Button3
+        'btnVerDetalhes
         '
-        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Location = New System.Drawing.Point(24, 515)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(198, 39)
-        Me.Button3.TabIndex = 5
-        Me.Button3.Text = "Ver Detalhes"
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.btnVerDetalhes.BackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.btnVerDetalhes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnVerDetalhes.Location = New System.Drawing.Point(24, 515)
+        Me.btnVerDetalhes.Name = "btnVerDetalhes"
+        Me.btnVerDetalhes.Size = New System.Drawing.Size(198, 39)
+        Me.btnVerDetalhes.TabIndex = 5
+        Me.btnVerDetalhes.Text = "Ver Detalhes"
+        Me.btnVerDetalhes.UseVisualStyleBackColor = False
         '
-        'Button4
+        'btnAtualizar
         '
-        Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Location = New System.Drawing.Point(661, 515)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(198, 39)
-        Me.Button4.TabIndex = 6
-        Me.Button4.Text = "Atualizar"
-        Me.Button4.UseVisualStyleBackColor = False
+        Me.btnAtualizar.BackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.btnAtualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAtualizar.Location = New System.Drawing.Point(661, 515)
+        Me.btnAtualizar.Name = "btnAtualizar"
+        Me.btnAtualizar.Size = New System.Drawing.Size(198, 39)
+        Me.btnAtualizar.TabIndex = 6
+        Me.btnAtualizar.Text = "Atualizar"
+        Me.btnAtualizar.UseVisualStyleBackColor = False
         '
-        'Button5
+        'btnExcluir
         '
-        Me.Button5.BackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button5.Location = New System.Drawing.Point(447, 515)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(198, 39)
-        Me.Button5.TabIndex = 7
-        Me.Button5.Text = "Excluir"
-        Me.Button5.UseVisualStyleBackColor = False
+        Me.btnExcluir.BackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnExcluir.Location = New System.Drawing.Point(447, 515)
+        Me.btnExcluir.Name = "btnExcluir"
+        Me.btnExcluir.Size = New System.Drawing.Size(198, 39)
+        Me.btnExcluir.TabIndex = 7
+        Me.btnExcluir.Text = "Excluir"
+        Me.btnExcluir.UseVisualStyleBackColor = False
         '
-        'Button6
+        'btnEditar
         '
-        Me.Button6.BackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button6.Location = New System.Drawing.Point(233, 515)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(198, 39)
-        Me.Button6.TabIndex = 8
-        Me.Button6.Text = "Editar"
-        Me.Button6.UseVisualStyleBackColor = False
+        Me.btnEditar.BackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEditar.Location = New System.Drawing.Point(233, 515)
+        Me.btnEditar.Name = "btnEditar"
+        Me.btnEditar.Size = New System.Drawing.Size(198, 39)
+        Me.btnEditar.TabIndex = 8
+        Me.btnEditar.Text = "Editar"
+        Me.btnEditar.UseVisualStyleBackColor = False
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
-        Me.Panel1.Controls.Add(Me.Button4)
-        Me.Panel1.Controls.Add(Me.Button6)
+        Me.Panel1.Controls.Add(Me.btnAtualizar)
+        Me.Panel1.Controls.Add(Me.btnEditar)
         Me.Panel1.Controls.Add(Me.TableLayoutPanel1)
-        Me.Panel1.Controls.Add(Me.Button5)
-        Me.Panel1.Controls.Add(Me.Button1)
-        Me.Panel1.Controls.Add(Me.Button2)
-        Me.Panel1.Controls.Add(Me.Button3)
+        Me.Panel1.Controls.Add(Me.btnExcluir)
+        Me.Panel1.Controls.Add(Me.btnBuscar)
+        Me.Panel1.Controls.Add(Me.btnLimparFiltro)
+        Me.Panel1.Controls.Add(Me.btnVerDetalhes)
         Me.Panel1.Controls.Add(Me.TableLayoutPanel2)
         Me.Panel1.Controls.Add(Me.TableLayoutPanel3)
         Me.Panel1.Location = New System.Drawing.Point(31, 37)
@@ -373,6 +366,14 @@ Partial Class Consultas_Cliente
         Me.VoltarToolStripMenuItem.Name = "VoltarToolStripMenuItem"
         Me.VoltarToolStripMenuItem.Size = New System.Drawing.Size(49, 20)
         Me.VoltarToolStripMenuItem.Text = "Voltar"
+        '
+        'dgvClientes
+        '
+        Me.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvClientes.Location = New System.Drawing.Point(3, 29)
+        Me.dgvClientes.Name = "dgvClientes"
+        Me.dgvClientes.Size = New System.Drawing.Size(829, 130)
+        Me.dgvClientes.TabIndex = 1
         '
         'Consultas_Cliente
         '
@@ -397,6 +398,7 @@ Partial Class Consultas_Cliente
         Me.Panel1.ResumeLayout(False)
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        CType(Me.dgvClientes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -408,28 +410,28 @@ Partial Class Consultas_Cliente
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents txtNomeFiltro As TextBox
+    Friend WithEvents txtCpfCnpjFiltro As TextBox
+    Friend WithEvents txtCidadeFiltro As TextBox
+    Friend WithEvents cmbStatusFiltro As ComboBox
+    Friend WithEvents btnBuscar As Button
+    Friend WithEvents btnLimparFiltro As Button
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents Label6 As Label
-    Friend WithEvents TextBox4 As TextBox
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button6 As Button
+    Friend WithEvents txtTotalClientes As TextBox
+    Friend WithEvents txtClientesAtivos As TextBox
+    Friend WithEvents txtClientesInativos As TextBox
+    Friend WithEvents btnVerDetalhes As Button
+    Friend WithEvents btnAtualizar As Button
+    Friend WithEvents btnExcluir As Button
+    Friend WithEvents btnEditar As Button
     Friend WithEvents Panel1 As Panel
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents VoltarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents dgvClientes As DataGridView
 End Class

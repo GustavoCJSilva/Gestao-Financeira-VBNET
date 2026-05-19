@@ -6,11 +6,22 @@ Public Class CadastroProdutos
 
     Private ReadOnly connectionString As String = "Data Source=localhost;Initial Catalog=Testes;User ID=sa;Password=1104;Integrated Security=False"
 
-    Private Sub CadastroProdutos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Public Sub New()
+        InitializeComponent()
+
+        AddHandler Me.Load, AddressOf CadastroProdutos_Load
+        AddHandler btnSalvarProduto.Click, AddressOf btnSalvarProduto_Click
+        AddHandler btnLimpar.Click, AddressOf btnLimpar_Click
+        AddHandler btnVerProdutos.Click, AddressOf btnVerProdutos_Click
+    End Sub
+
+    Private Sub CadastroProdutos_Load(sender As Object, e As EventArgs)
         PrepararTela()
     End Sub
 
     Private Sub btnSalvarProduto_Click(sender As Object, e As EventArgs)
+        MessageBox.Show("Botão Salvar Produto funcionando.", "Teste", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
         If ValidarCampos() = False Then
             Return
         End If
@@ -18,11 +29,11 @@ Public Class CadastroProdutos
         SalvarProduto()
     End Sub
 
-    Private Sub btnLimpar_Click(sender As Object, e As EventArgs) Handles btnLimpar.Click
+    Private Sub btnLimpar_Click(sender As Object, e As EventArgs)
         LimparCampos()
     End Sub
 
-    Private Sub btnVerProdutos_Click(sender As Object, e As EventArgs) Handles btnVerProdutos.Click
+    Private Sub btnVerProdutos_Click(sender As Object, e As EventArgs)
         MessageBox.Show("A tela de consulta de produtos ainda não foi criada.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
@@ -56,7 +67,9 @@ Public Class CadastroProdutos
             Return False
         End If
 
-        If Integer.TryParse(txtQuantidade.Text.Trim(), Nothing) = False Then
+        Dim quantidade As Integer
+
+        If Integer.TryParse(txtQuantidade.Text.Trim(), quantidade) = False Then
             MessageBox.Show("A quantidade deve ser um número inteiro.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             txtQuantidade.Focus()
             Return False
@@ -98,15 +111,17 @@ Public Class CadastroProdutos
                 comando.Parameters.Add("@UnidadeMedida", SqlDbType.VarChar, 30).Value = TextoOuNulo(txtUnidadeMedida.Text)
                 comando.Parameters.Add("@Localizacao", SqlDbType.VarChar, 100).Value = TextoOuNulo(txtLocalizacao.Text)
                 comando.Parameters.Add("@ProdutoAtivo", SqlDbType.Bit).Value = chkProdutoAtivo.Checked
-                comando.Parameters.Add("@PrecoCusto", SqlDbType.Decimal).Value = DecimalOuNulo(txtPrecoCusto.Text)
-                comando.Parameters.Add("@PrecoVenda", SqlDbType.Decimal).Value = ConverterDecimal(txtPrecoVenda.Text)
-                comando.Parameters.Add("@Frete", SqlDbType.Decimal).Value = DecimalOuNulo(txtFrete.Text)
-                comando.Parameters.Add("@DescontoMaximo", SqlDbType.Decimal).Value = DecimalOuNulo(txtDescontoMaximo.Text)
-                comando.Parameters.Add("@MargemLucro", SqlDbType.Decimal).Value = DecimalOuNulo(txtMargemLucro.Text)
-                comando.Parameters.Add("@Peso", SqlDbType.Decimal).Value = DecimalOuNulo(txtPeso.Text)
-                comando.Parameters.Add("@Altura", SqlDbType.Decimal).Value = DecimalOuNulo(txtAltura.Text)
-                comando.Parameters.Add("@Largura", SqlDbType.Decimal).Value = DecimalOuNulo(txtLargura.Text)
-                comando.Parameters.Add("@Comprimento", SqlDbType.Decimal).Value = DecimalOuNulo(txtComprimento.Text)
+
+                AdicionarParametroDecimal(comando, "@PrecoCusto", DecimalOuNulo(txtPrecoCusto.Text))
+                AdicionarParametroDecimal(comando, "@PrecoVenda", ConverterDecimal(txtPrecoVenda.Text))
+                AdicionarParametroDecimal(comando, "@Frete", DecimalOuNulo(txtFrete.Text))
+                AdicionarParametroDecimal(comando, "@DescontoMaximo", DecimalOuNulo(txtDescontoMaximo.Text))
+                AdicionarParametroDecimal(comando, "@MargemLucro", DecimalOuNulo(txtMargemLucro.Text))
+                AdicionarParametroDecimal(comando, "@Peso", DecimalOuNulo(txtPeso.Text))
+                AdicionarParametroDecimal(comando, "@Altura", DecimalOuNulo(txtAltura.Text))
+                AdicionarParametroDecimal(comando, "@Largura", DecimalOuNulo(txtLargura.Text))
+                AdicionarParametroDecimal(comando, "@Comprimento", DecimalOuNulo(txtComprimento.Text))
+
                 comando.Parameters.Add("@Tamanho", SqlDbType.VarChar, 50).Value = TextoOuNulo(txtTamanho.Text)
                 comando.Parameters.Add("@Cor", SqlDbType.VarChar, 50).Value = TextoOuNulo(txtCor.Text)
                 comando.Parameters.Add("@Material", SqlDbType.VarChar, 100).Value = TextoOuNulo(txtMaterial.Text)
@@ -116,15 +131,29 @@ Public Class CadastroProdutos
 
                 Try
                     conexao.Open()
-                    comando.ExecuteNonQuery()
-                    MessageBox.Show("Produto cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    LimparCampos()
+
+                    Dim linhasAfetadas As Integer = comando.ExecuteNonQuery()
+
+                    If linhasAfetadas > 0 Then
+                        MessageBox.Show("Produto cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        LimparCampos()
+                    Else
+                        MessageBox.Show("Nenhum produto foi cadastrado.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                    End If
+
                 Catch ex As Exception
                     MessageBox.Show("Erro ao cadastrar produto: " & ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End Try
 
             End Using
         End Using
+    End Sub
+
+    Private Sub AdicionarParametroDecimal(comando As SqlCommand, nomeParametro As String, valor As Object)
+        Dim parametro As SqlParameter = comando.Parameters.Add(nomeParametro, SqlDbType.Decimal)
+        parametro.Precision = 18
+        parametro.Scale = 3
+        parametro.Value = valor
     End Sub
 
     Private Function TextoOuNulo(valor As String) As Object
@@ -151,6 +180,10 @@ Public Class CadastroProdutos
 
     Private Function DecimalOuNulo(valor As String) As Object
         If String.IsNullOrWhiteSpace(valor) Then
+            Return DBNull.Value
+        End If
+
+        If DecimalValido(valor) = False Then
             Return DBNull.Value
         End If
 

@@ -28,6 +28,7 @@ Partial Class CadastroProdutos
         Me.CadProd = New System.Windows.Forms.TabPage()
         Me.pnlConteudo = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnSalvarProduto = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.txtModelo = New System.Windows.Forms.TextBox()
         Me.txtMarca = New System.Windows.Forms.TextBox()
@@ -92,7 +93,6 @@ Partial Class CadastroProdutos
         Me.Label26 = New System.Windows.Forms.Label()
         Me.txtDescricao = New System.Windows.Forms.TextBox()
         Me.PageSetupDialog1 = New System.Windows.Forms.PageSetupDialog()
-        Me.btnSalvarProduto = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.Tabs.SuspendLayout()
         Me.CadProd.SuspendLayout()
@@ -171,13 +171,25 @@ Partial Class CadastroProdutos
         Me.Panel1.Size = New System.Drawing.Size(494, 795)
         Me.Panel1.TabIndex = 8
         '
+        'btnSalvarProduto
+        '
+        Me.btnSalvarProduto.BackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.btnSalvarProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSalvarProduto.ForeColor = System.Drawing.Color.White
+        Me.btnSalvarProduto.Location = New System.Drawing.Point(22, 742)
+        Me.btnSalvarProduto.Name = "btnSalvarProduto"
+        Me.btnSalvarProduto.Size = New System.Drawing.Size(114, 34)
+        Me.btnSalvarProduto.TabIndex = 8
+        Me.btnSalvarProduto.Text = "Salvar Produto"
+        Me.btnSalvarProduto.UseVisualStyleBackColor = False
+        '
         'TableLayoutPanel1
         '
         Me.TableLayoutPanel1.BackColor = System.Drawing.Color.White
         Me.TableLayoutPanel1.ColumnCount = 3
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.69512!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.30488!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 128.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 129.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.txtModelo, 2, 4)
         Me.TableLayoutPanel1.Controls.Add(Me.txtMarca, 1, 4)
         Me.TableLayoutPanel1.Controls.Add(Me.txtCategoria, 0, 4)
@@ -205,14 +217,14 @@ Partial Class CadastroProdutos
         '
         'txtModelo
         '
-        Me.txtModelo.Location = New System.Drawing.Point(324, 93)
+        Me.txtModelo.Location = New System.Drawing.Point(323, 93)
         Me.txtModelo.Name = "txtModelo"
         Me.txtModelo.Size = New System.Drawing.Size(100, 23)
         Me.txtModelo.TabIndex = 15
         '
         'txtMarca
         '
-        Me.txtMarca.Location = New System.Drawing.Point(163, 93)
+        Me.txtMarca.Location = New System.Drawing.Point(162, 93)
         Me.txtMarca.Name = "txtMarca"
         Me.txtMarca.Size = New System.Drawing.Size(100, 23)
         Me.txtMarca.TabIndex = 14
@@ -236,7 +248,7 @@ Partial Class CadastroProdutos
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(163, 70)
+        Me.Label5.Location = New System.Drawing.Point(162, 70)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(40, 15)
         Me.Label5.TabIndex = 11
@@ -245,7 +257,7 @@ Partial Class CadastroProdutos
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(324, 70)
+        Me.Label6.Location = New System.Drawing.Point(323, 70)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(48, 15)
         Me.Label6.TabIndex = 12
@@ -255,7 +267,7 @@ Partial Class CadastroProdutos
         '
         Me.txtCodigoBarras.BackColor = System.Drawing.Color.White
         Me.txtCodigoBarras.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(55, Byte), Integer))
-        Me.txtCodigoBarras.Location = New System.Drawing.Point(324, 45)
+        Me.txtCodigoBarras.Location = New System.Drawing.Point(323, 45)
         Me.txtCodigoBarras.Name = "txtCodigoBarras"
         Me.txtCodigoBarras.Size = New System.Drawing.Size(100, 23)
         Me.txtCodigoBarras.TabIndex = 9
@@ -263,7 +275,7 @@ Partial Class CadastroProdutos
         'txtCodigoSku
         '
         Me.txtCodigoSku.BackColor = System.Drawing.Color.White
-        Me.txtCodigoSku.Location = New System.Drawing.Point(163, 45)
+        Me.txtCodigoSku.Location = New System.Drawing.Point(162, 45)
         Me.txtCodigoSku.Name = "txtCodigoSku"
         Me.txtCodigoSku.Size = New System.Drawing.Size(100, 23)
         Me.txtCodigoSku.TabIndex = 7
@@ -289,7 +301,7 @@ Partial Class CadastroProdutos
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(163, 24)
+        Me.Label2.Location = New System.Drawing.Point(162, 24)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(72, 15)
         Me.Label2.TabIndex = 6
@@ -298,7 +310,7 @@ Partial Class CadastroProdutos
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(324, 24)
+        Me.Label3.Location = New System.Drawing.Point(323, 24)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(97, 15)
         Me.Label3.TabIndex = 8
@@ -805,18 +817,6 @@ Partial Class CadastroProdutos
         Me.txtDescricao.Name = "txtDescricao"
         Me.txtDescricao.Size = New System.Drawing.Size(444, 58)
         Me.txtDescricao.TabIndex = 1
-        '
-        'btnSalvarProduto
-        '
-        Me.btnSalvarProduto.BackColor = System.Drawing.SystemColors.MenuHighlight
-        Me.btnSalvarProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSalvarProduto.ForeColor = System.Drawing.Color.White
-        Me.btnSalvarProduto.Location = New System.Drawing.Point(22, 742)
-        Me.btnSalvarProduto.Name = "btnSalvarProduto"
-        Me.btnSalvarProduto.Size = New System.Drawing.Size(114, 34)
-        Me.btnSalvarProduto.TabIndex = 8
-        Me.btnSalvarProduto.Text = "Salvar Produto"
-        Me.btnSalvarProduto.UseVisualStyleBackColor = False
         '
         'CadastroProdutos
         '
