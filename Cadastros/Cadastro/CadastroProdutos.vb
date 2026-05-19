@@ -233,4 +233,8 @@ Public Class CadastroProdutos
         txtNomeProduto.Focus()
     End Sub
 
+    Private Sub VoltarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VoltarToolStripMenuItem.Click
+        Close()
+
+    End Sub
 End Class

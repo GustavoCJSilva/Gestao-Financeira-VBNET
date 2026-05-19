@@ -495,4 +495,8 @@ Public Class Nova_Venda
         Close()
     End Sub
 
+    Private Sub VoltarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VoltarToolStripMenuItem.Click
+        Close()
+
+    End Sub
 End Class

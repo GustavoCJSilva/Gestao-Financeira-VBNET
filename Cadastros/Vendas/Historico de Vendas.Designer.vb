@@ -42,6 +42,7 @@ Partial Class Historico_de_Vendas
         Me.btnVoltar = New System.Windows.Forms.Button()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.dgvVendas = New System.Windows.Forms.DataGridView()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -51,13 +52,12 @@ Partial Class Historico_de_Vendas
         Me.txtValorTotal = New System.Windows.Forms.TextBox()
         Me.txtVendasCanceladas = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.dgvVendas = New System.Windows.Forms.DataGridView()
         Me.MenuStrip1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
+        CType(Me.dgvVendas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel3.SuspendLayout()
         Me.Panel1.SuspendLayout()
-        CType(Me.dgvVendas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -84,7 +84,7 @@ Partial Class Historico_de_Vendas
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60.57692!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 216.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 189.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 144.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 145.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label2, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Label3, 1, 1)
@@ -136,7 +136,7 @@ Partial Class Historico_de_Vendas
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(359, 47)
+        Me.Label4.Location = New System.Drawing.Point(358, 47)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(79, 21)
         Me.Label4.TabIndex = 3
@@ -145,7 +145,7 @@ Partial Class Historico_de_Vendas
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(575, 47)
+        Me.Label5.Location = New System.Drawing.Point(574, 47)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(158, 21)
         Me.Label5.TabIndex = 4
@@ -154,7 +154,7 @@ Partial Class Historico_de_Vendas
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(764, 47)
+        Me.Label6.Location = New System.Drawing.Point(763, 47)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(52, 21)
         Me.Label6.TabIndex = 5
@@ -179,7 +179,7 @@ Partial Class Historico_de_Vendas
         'dtpDataFinal
         '
         Me.dtpDataFinal.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpDataFinal.Location = New System.Drawing.Point(359, 109)
+        Me.dtpDataFinal.Location = New System.Drawing.Point(358, 109)
         Me.dtpDataFinal.Name = "dtpDataFinal"
         Me.dtpDataFinal.Size = New System.Drawing.Size(200, 29)
         Me.dtpDataFinal.TabIndex = 8
@@ -187,7 +187,7 @@ Partial Class Historico_de_Vendas
         'cmbFormaPagamento
         '
         Me.cmbFormaPagamento.FormattingEnabled = True
-        Me.cmbFormaPagamento.Location = New System.Drawing.Point(575, 109)
+        Me.cmbFormaPagamento.Location = New System.Drawing.Point(574, 109)
         Me.cmbFormaPagamento.Name = "cmbFormaPagamento"
         Me.cmbFormaPagamento.Size = New System.Drawing.Size(121, 29)
         Me.cmbFormaPagamento.TabIndex = 9
@@ -195,7 +195,7 @@ Partial Class Historico_de_Vendas
         'cmbStatus
         '
         Me.cmbStatus.FormattingEnabled = True
-        Me.cmbStatus.Location = New System.Drawing.Point(764, 109)
+        Me.cmbStatus.Location = New System.Drawing.Point(763, 109)
         Me.cmbStatus.Name = "cmbStatus"
         Me.cmbStatus.Size = New System.Drawing.Size(121, 29)
         Me.cmbStatus.TabIndex = 10
@@ -269,13 +269,21 @@ Partial Class Historico_de_Vendas
         Me.Label7.TabIndex = 0
         Me.Label7.Text = "🧾 Vendas Encontradas"
         '
+        'dgvVendas
+        '
+        Me.dgvVendas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvVendas.Location = New System.Drawing.Point(3, 31)
+        Me.dgvVendas.Name = "dgvVendas"
+        Me.dgvVendas.Size = New System.Drawing.Size(900, 112)
+        Me.dgvVendas.TabIndex = 1
+        '
         'TableLayoutPanel3
         '
         Me.TableLayoutPanel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(252, Byte), Integer))
         Me.TableLayoutPanel3.ColumnCount = 3
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.95597!))
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.04403!))
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 271.0!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 272.0!))
         Me.TableLayoutPanel3.Controls.Add(Me.Label8, 0, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.Label9, 0, 1)
         Me.TableLayoutPanel3.Controls.Add(Me.Label10, 1, 1)
@@ -322,7 +330,7 @@ Partial Class Historico_de_Vendas
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(637, 59)
+        Me.Label11.Location = New System.Drawing.Point(636, 59)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(142, 21)
         Me.Label11.TabIndex = 3
@@ -344,7 +352,7 @@ Partial Class Historico_de_Vendas
         '
         'txtVendasCanceladas
         '
-        Me.txtVendasCanceladas.Location = New System.Drawing.Point(637, 134)
+        Me.txtVendasCanceladas.Location = New System.Drawing.Point(636, 134)
         Me.txtVendasCanceladas.Name = "txtVendasCanceladas"
         Me.txtVendasCanceladas.Size = New System.Drawing.Size(100, 29)
         Me.txtVendasCanceladas.TabIndex = 6
@@ -363,14 +371,6 @@ Partial Class Historico_de_Vendas
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(937, 598)
         Me.Panel1.TabIndex = 12
-        '
-        'dgvVendas
-        '
-        Me.dgvVendas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvVendas.Location = New System.Drawing.Point(3, 31)
-        Me.dgvVendas.Name = "dgvVendas"
-        Me.dgvVendas.Size = New System.Drawing.Size(900, 112)
-        Me.dgvVendas.TabIndex = 1
         '
         'Historico_de_Vendas
         '
@@ -392,10 +392,10 @@ Partial Class Historico_de_Vendas
         Me.TableLayoutPanel1.PerformLayout()
         Me.TableLayoutPanel2.ResumeLayout(False)
         Me.TableLayoutPanel2.PerformLayout()
+        CType(Me.dgvVendas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel3.ResumeLayout(False)
         Me.TableLayoutPanel3.PerformLayout()
         Me.Panel1.ResumeLayout(False)
-        CType(Me.dgvVendas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

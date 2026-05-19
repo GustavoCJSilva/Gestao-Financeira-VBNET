@@ -36,6 +36,7 @@ Partial Class Consultas_Cliente
         Me.btnLimparFiltro = New System.Windows.Forms.Button()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.dgvClientes = New System.Windows.Forms.DataGridView()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -51,13 +52,12 @@ Partial Class Consultas_Cliente
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.VoltarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.dgvClientes = New System.Windows.Forms.DataGridView()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
+        CType(Me.dgvClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel3.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
-        CType(Me.dgvClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TableLayoutPanel1
@@ -208,13 +208,21 @@ Partial Class Consultas_Cliente
         Me.Label6.TabIndex = 0
         Me.Label6.Text = "👥 Clientes Encontrados"
         '
+        'dgvClientes
+        '
+        Me.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvClientes.Location = New System.Drawing.Point(3, 29)
+        Me.dgvClientes.Name = "dgvClientes"
+        Me.dgvClientes.Size = New System.Drawing.Size(829, 130)
+        Me.dgvClientes.TabIndex = 1
+        '
         'TableLayoutPanel3
         '
         Me.TableLayoutPanel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(252, Byte), Integer))
         Me.TableLayoutPanel3.ColumnCount = 3
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.71429!))
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.28571!))
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 275.0!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 276.0!))
         Me.TableLayoutPanel3.Controls.Add(Me.Label7, 0, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.Label8, 0, 1)
         Me.TableLayoutPanel3.Controls.Add(Me.Label9, 1, 1)
@@ -252,7 +260,7 @@ Partial Class Consultas_Cliente
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(287, 31)
+        Me.Label9.Location = New System.Drawing.Point(286, 31)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(107, 21)
         Me.Label9.TabIndex = 2
@@ -261,7 +269,7 @@ Partial Class Consultas_Cliente
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(562, 31)
+        Me.Label10.Location = New System.Drawing.Point(561, 31)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(123, 21)
         Me.Label10.TabIndex = 3
@@ -272,12 +280,12 @@ Partial Class Consultas_Cliente
         Me.txtTotalClientes.Location = New System.Drawing.Point(3, 81)
         Me.txtTotalClientes.Multiline = True
         Me.txtTotalClientes.Name = "txtTotalClientes"
-        Me.txtTotalClientes.Size = New System.Drawing.Size(278, 48)
+        Me.txtTotalClientes.Size = New System.Drawing.Size(277, 48)
         Me.txtTotalClientes.TabIndex = 4
         '
         'txtClientesAtivos
         '
-        Me.txtClientesAtivos.Location = New System.Drawing.Point(287, 81)
+        Me.txtClientesAtivos.Location = New System.Drawing.Point(286, 81)
         Me.txtClientesAtivos.Multiline = True
         Me.txtClientesAtivos.Name = "txtClientesAtivos"
         Me.txtClientesAtivos.Size = New System.Drawing.Size(269, 48)
@@ -285,7 +293,7 @@ Partial Class Consultas_Cliente
         '
         'txtClientesInativos
         '
-        Me.txtClientesInativos.Location = New System.Drawing.Point(562, 81)
+        Me.txtClientesInativos.Location = New System.Drawing.Point(561, 81)
         Me.txtClientesInativos.Multiline = True
         Me.txtClientesInativos.Name = "txtClientesInativos"
         Me.txtClientesInativos.Size = New System.Drawing.Size(269, 48)
@@ -367,14 +375,6 @@ Partial Class Consultas_Cliente
         Me.VoltarToolStripMenuItem.Size = New System.Drawing.Size(49, 20)
         Me.VoltarToolStripMenuItem.Text = "Voltar"
         '
-        'dgvClientes
-        '
-        Me.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvClientes.Location = New System.Drawing.Point(3, 29)
-        Me.dgvClientes.Name = "dgvClientes"
-        Me.dgvClientes.Size = New System.Drawing.Size(829, 130)
-        Me.dgvClientes.TabIndex = 1
-        '
         'Consultas_Cliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 21.0!)
@@ -393,12 +393,12 @@ Partial Class Consultas_Cliente
         Me.TableLayoutPanel1.PerformLayout()
         Me.TableLayoutPanel2.ResumeLayout(False)
         Me.TableLayoutPanel2.PerformLayout()
+        CType(Me.dgvClientes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel3.ResumeLayout(False)
         Me.TableLayoutPanel3.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
-        CType(Me.dgvClientes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

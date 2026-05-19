@@ -143,7 +143,7 @@ Partial Class Cadastro_CltxtDataNascimentoientes
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(430, 50)
+        Me.Label4.Location = New System.Drawing.Point(429, 50)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(114, 15)
@@ -206,7 +206,7 @@ Partial Class Cadastro_CltxtDataNascimentoientes
         'txtDataNascimentos
         '
         Me.txtDataNascimentos.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.txtDataNascimentos.Location = New System.Drawing.Point(430, 106)
+        Me.txtDataNascimentos.Location = New System.Drawing.Point(429, 106)
         Me.txtDataNascimentos.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.txtDataNascimentos.Name = "txtDataNascimentos"
         Me.txtDataNascimentos.Size = New System.Drawing.Size(143, 23)
@@ -244,7 +244,7 @@ Partial Class Cadastro_CltxtDataNascimentoientes
         Me.TableLayoutPanel1.ColumnCount = 3
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.6413!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.3587!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 177.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 178.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label2, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Label3, 1, 1)
@@ -291,7 +291,7 @@ Partial Class Cadastro_CltxtDataNascimentoientes
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(430, 164)
+        Me.Label18.Location = New System.Drawing.Point(429, 164)
         Me.Label18.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(39, 15)
@@ -301,7 +301,7 @@ Partial Class Cadastro_CltxtDataNascimentoientes
         'chkClienteAtivo
         '
         Me.chkClienteAtivo.AutoSize = True
-        Me.chkClienteAtivo.Location = New System.Drawing.Point(430, 221)
+        Me.chkClienteAtivo.Location = New System.Drawing.Point(429, 221)
         Me.chkClienteAtivo.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.chkClienteAtivo.Name = "chkClienteAtivo"
         Me.chkClienteAtivo.Size = New System.Drawing.Size(94, 19)
@@ -315,7 +315,7 @@ Partial Class Cadastro_CltxtDataNascimentoientes
         Me.TableLayoutPanel2.ColumnCount = 3
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.36956!))
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.63044!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 178.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 179.0!))
         Me.TableLayoutPanel2.Controls.Add(Me.Label9, 0, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.Contato, 0, 1)
         Me.TableLayoutPanel2.Controls.Add(Me.txtTelefone, 0, 2)
@@ -347,7 +347,7 @@ Partial Class Cadastro_CltxtDataNascimentoientes
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(211, 48)
+        Me.Label10.Location = New System.Drawing.Point(210, 48)
         Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(60, 15)
@@ -357,7 +357,7 @@ Partial Class Cadastro_CltxtDataNascimentoientes
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(431, 48)
+        Me.Label11.Location = New System.Drawing.Point(430, 48)
         Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(41, 15)
@@ -366,7 +366,7 @@ Partial Class Cadastro_CltxtDataNascimentoientes
         '
         'txtWhatsapp
         '
-        Me.txtWhatsapp.Location = New System.Drawing.Point(211, 109)
+        Me.txtWhatsapp.Location = New System.Drawing.Point(210, 109)
         Me.txtWhatsapp.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.txtWhatsapp.Name = "txtWhatsapp"
         Me.txtWhatsapp.Size = New System.Drawing.Size(116, 23)
@@ -374,7 +374,7 @@ Partial Class Cadastro_CltxtDataNascimentoientes
         '
         'txtEmail
         '
-        Me.txtEmail.Location = New System.Drawing.Point(431, 109)
+        Me.txtEmail.Location = New System.Drawing.Point(430, 109)
         Me.txtEmail.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(116, 23)

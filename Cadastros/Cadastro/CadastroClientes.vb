@@ -132,4 +132,7 @@ Public Class Cadastro_CltxtDataNascimentoientes
         txtNomes.Focus()
     End Sub
 
+    Private Sub VoltarMenuToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VoltarMenuToolStripMenuItem.Click
+        Close()
+    End Sub
 End Class
