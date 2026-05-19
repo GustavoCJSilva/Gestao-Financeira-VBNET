@@ -1,152 +1,135 @@
-﻿Imports System.Data.Common
-Imports System.Data.OleDb
+﻿Imports System.Data
 Imports System.Data.SqlClient
-Imports System.IO
-Imports LinqToDB.Data
 
 Public Class Cadastro_CltxtDataNascimentoientes
-    Inherits System.Windows.Forms.Form
-    Private myConn As SqlConnection
-    Private myCmd As Object
-    Private myReader As SqlDataReader
-    Private results As String
-    Private objBanco As Object
-    Private dgvDados As Object
-    Private Cmd As SqlCommand
-    Private conexao As Object
-    Private comando As Object
 
-    Private Sub VoltarMenuToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VoltarMenuToolStripMenuItem.Click
-        Dim Voltar As New Menu
-        Close()
+    Private ReadOnly connectionString As String = "Data Source=localhost;Initial Catalog=Testes;User ID=sa;Password=1104;Integrated Security=False"
 
+    Private Sub Cadastro_Clientes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        PrepararTela()
     End Sub
 
-    Private Sub txtNome(sender As Object, e As EventArgs) Handles txtNomes.TextChanged
-
-    End Sub
-
-    Private Sub txtSobrenome(sender As Object, e As EventArgs) Handles txtSobrenomes.TextChanged
-
-    End Sub
-
-    Private Sub txtEstado(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub txtCidade(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub lstClientes(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub btnAdicionarCliente(sender As Object, e As EventArgs) Handles Button1.Click
-        'Declarando Variaveis e aplicando'
-        Dim nome As String = txtNomes.Text
-        Dim sobrenome As String = txtSobrenomes.Text
-        Dim dataNascimento As String = txtDataNascimentos.Text
-        Dim cpfCnpj As String = txtCpfCnpjs.Text
-        Dim estado As String = txtEstados.Text
-        Dim cidade As String = txtCidades.Text
-        Dim Contato As String = txtcontato.Text
-
-        Dim cliente As String = nome & "" & sobrenome & " | " &
-            "Data de Nascimento: " & dataNascimento & " | " &
-                            "CPF/CNPJ: " & cpfCnpj & " | " &
-                            "Estado: " & estado & " | " &
-                            "Cidade: " & cidade & " | " &
-                            "Contato:" & Contato
-
-
-
-        If String.IsNullOrEmpty(nome) Or
-            String.IsNullOrEmpty(sobrenome) Or
-            String.IsNullOrEmpty(dataNascimento) Or
-            String.IsNullOrEmpty(cpfCnpj) Or
-            String.IsNullOrEmpty(estado) Or
-            String.IsNullOrEmpty(cidade) Or
-            String.IsNullOrEmpty(Contato) Then
-
-            MessageBox.Show("Favor Preencher Todos os Dados")
+    Private Sub btnSalvarCliente_Click(sender As Object, e As EventArgs) Handles btnSalvarCliente.Click
+        If ValidarCampos() = False Then
             Return
         End If
 
-        Dim connectionString As String = "Data Source=localhost;Initial Catalog=Testes;User ID=sa;Password=1104;Integrated Security=False"
-        Dim sql As String = "INSERT INTO CadastroClientes (Nome, Sobrenome, Datanascimento, Cpf, Estado, Cidade, Contato) VALUES (@Nome, @Sobrenome, @Datanascimento, @Cpf, @Estado, @Cidade, @Contato)"
+        SalvarCliente()
+    End Sub
 
-        Using connection As New SqlConnection(connectionString)
-            Using command As New SqlCommand(sql, connection)
-                command.Parameters.AddWithValue("@Nome", nome)
-                command.Parameters.AddWithValue("@Sobrenome", sobrenome)
-                command.Parameters.AddWithValue("@Datanascimento", dataNascimento)
-                command.Parameters.AddWithValue("@Cpf", cpfCnpj)
-                command.Parameters.AddWithValue("@Estado", estado)
-                command.Parameters.AddWithValue("@Cidade", cidade)
-                command.Parameters.AddWithValue("@Contato", Contato)
+    Private Sub btnLimpar_Click(sender As Object, e As EventArgs) Handles btnLimpar.Click
+        LimparCampos()
+    End Sub
+
+    Private Sub btnVerClientes_Click(sender As Object, e As EventArgs) Handles btnVerClientes.Click
+        Dim tela As New Consultas_Cliente
+        tela.Show()
+    End Sub
+
+    Private Sub PrepararTela()
+        chkClienteAtivo.Checked = True
+        txtDataNascimentos.Value = Date.Today
+        txtNomes.Focus()
+    End Sub
+
+    Private Function ValidarCampos() As Boolean
+        If txtNomes.Text.Trim() = "" Then
+            MessageBox.Show("Informe o nome do cliente.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            txtNomes.Focus()
+            Return False
+        End If
+
+        If txtSobrenomes.Text.Trim() = "" Then
+            MessageBox.Show("Informe o sobrenome do cliente.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            txtSobrenomes.Focus()
+            Return False
+        End If
+
+        If cmbTipoCliente.Text.Trim() = "" Then
+            MessageBox.Show("Informe o tipo de cliente.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            cmbTipoCliente.Focus()
+            Return False
+        End If
+
+        If txtCpfCnpjs.Text.Trim() = "" Then
+            MessageBox.Show("Informe o CPF/CNPJ do cliente.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            txtCpfCnpjs.Focus()
+            Return False
+        End If
+
+        Return True
+    End Function
+
+    Private Sub SalvarCliente()
+        Dim sql As String =
+            "INSERT INTO CadastroClientes " &
+            "(Nome, Sobrenome, DataNascimento, TipoCliente, CpfCnpj, ClienteAtivo, Telefone, Whatsapp, Email, Cep, Estado, Cidade, Bairro, Rua, Numero, Complemento, Observacoes) " &
+            "VALUES " &
+            "(@Nome, @Sobrenome, @DataNascimento, @TipoCliente, @CpfCnpj, @ClienteAtivo, @Telefone, @Whatsapp, @Email, @Cep, @Estado, @Cidade, @Bairro, @Rua, @Numero, @Complemento, @Observacoes)"
+
+        Using conexao As New SqlConnection(connectionString)
+            Using comando As New SqlCommand(sql, conexao)
+
+                comando.Parameters.Add("@Nome", SqlDbType.VarChar, 100).Value = txtNomes.Text.Trim()
+                comando.Parameters.Add("@Sobrenome", SqlDbType.VarChar, 100).Value = txtSobrenomes.Text.Trim()
+                comando.Parameters.Add("@DataNascimento", SqlDbType.Date).Value = txtDataNascimentos.Value.Date
+                comando.Parameters.Add("@TipoCliente", SqlDbType.VarChar, 30).Value = cmbTipoCliente.Text.Trim()
+                comando.Parameters.Add("@CpfCnpj", SqlDbType.VarChar, 20).Value = txtCpfCnpjs.Text.Trim()
+                comando.Parameters.Add("@ClienteAtivo", SqlDbType.Bit).Value = chkClienteAtivo.Checked
+                comando.Parameters.Add("@Telefone", SqlDbType.VarChar, 20).Value = TextoOuNulo(txtTelefone.Text)
+                comando.Parameters.Add("@Whatsapp", SqlDbType.VarChar, 20).Value = TextoOuNulo(txtWhatsapp.Text)
+                comando.Parameters.Add("@Email", SqlDbType.VarChar, 150).Value = TextoOuNulo(txtEmail.Text)
+                comando.Parameters.Add("@Cep", SqlDbType.VarChar, 15).Value = TextoOuNulo(txtCep.Text)
+                comando.Parameters.Add("@Estado", SqlDbType.VarChar, 2).Value = TextoOuNulo(cmbEstado.Text)
+                comando.Parameters.Add("@Cidade", SqlDbType.VarChar, 100).Value = TextoOuNulo(txtCidades.Text)
+                comando.Parameters.Add("@Bairro", SqlDbType.VarChar, 100).Value = TextoOuNulo(txtBairro.Text)
+                comando.Parameters.Add("@Rua", SqlDbType.VarChar, 150).Value = TextoOuNulo(txtRua.Text)
+                comando.Parameters.Add("@Numero", SqlDbType.VarChar, 20).Value = TextoOuNulo(txtNumero.Text)
+                comando.Parameters.Add("@Complemento", SqlDbType.VarChar, 150).Value = TextoOuNulo(txtComplemento.Text)
+                comando.Parameters.Add("@Observacoes", SqlDbType.VarChar, 500).Value = TextoOuNulo(txtObservacoes.Text)
 
                 Try
-                    connection.Open()
-                    Dim rowsAffected As Integer = command.ExecuteNonQuery()
-                    MessageBox.Show("Cliente Cadastrado com Sucesso!")
+                    conexao.Open()
+                    comando.ExecuteNonQuery()
+                    MessageBox.Show("Cliente cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    LimparCampos()
                 Catch ex As Exception
-                    MessageBox.Show("Erro ao conectar ao banco de dados: " & ex.Message)
+                    MessageBox.Show("Erro ao cadastrar cliente: " & ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End Try
+
             End Using
         End Using
     End Sub
 
-    Private Sub txtCpfCnpj(sender As Object, e As MaskInputRejectedEventArgs) Handles txtCpfCnpjs.MaskInputRejected
+    Private Function TextoOuNulo(valor As String) As Object
+        If String.IsNullOrWhiteSpace(valor) Then
+            Return DBNull.Value
+        End If
 
+        Return valor.Trim()
+    End Function
+
+    Private Sub LimparCampos()
+        txtNomes.Clear()
+        txtSobrenomes.Clear()
+        cmbTipoCliente.Clear()
+        txtCpfCnpjs.Clear()
+        txtTelefone.Clear()
+        txtWhatsapp.Clear()
+        txtEmail.Clear()
+        txtCep.Clear()
+        cmbEstado.Clear()
+        txtCidades.Clear()
+        txtBairro.Clear()
+        txtRua.Clear()
+        txtNumero.Clear()
+        txtComplemento.Clear()
+        txtObservacoes.Clear()
+
+        chkClienteAtivo.Checked = True
+        txtDataNascimentos.Value = Date.Today
+
+        txtNomes.Focus()
     End Sub
 
-
-
-    Private Sub txtcontatos(sender As Object, e As MaskInputRejectedEventArgs) Handles txtcontato.MaskInputRejected
-
-    End Sub
-
-    Private Sub txtDataNascimento(sender As Object, e As EventArgs) Handles txtDataNascimentos.ValueChanged
-
-    End Sub
-
-    Private Sub Cadastros_Click(sender As Object, e As EventArgs) Handles Cadastros.Click
-
-
-        CarregarClientes()
-    End Sub
-
-    Private Sub Atualizar_Click(sender As Object, e As EventArgs) Handles Atualizar.Click
-        CarregarClientes()
-    End Sub
-
-    Private Sub CarregarClientes()
-
-        Dim connectionString As String = "Data Source=localhost;Initial Catalog=Testes;User ID=sa;Password=1104;Integrated Security=False"
-        Dim sql As String = "SELECT Nome, Sobrenome, Datanascimento, Cpf, Estado, Cidade, Contato FROM CadastroClientes"
-
-        Using connection As New SqlConnection(connectionString)
-            Using command As New SqlCommand(sql, connection)
-                Try
-                    connection.Open()
-                    Using Reader As SqlDataReader = command.ExecuteReader()
-                        While Reader.Read()
-                            Dim cliente As String =
-                                Reader("Nome").ToString() & " " &
-                                Reader("Sobrenome").ToString() & " | " &
-                                "Data de Nascimento: " & Reader("Datanascimento").ToString() & " | " &
-                                "CPF/CNPJ: " & Reader("Cpf").ToString() & " | " &
-                                "Estado: " & Reader("Estado").ToString() & " | " &
-                                "Cidade: " & Reader("Cidade").ToString() & " | " &
-                                "Contato: " & Reader("Contato").ToString()
-
-                        End While
-                    End Using
-                Catch ex As Exception
-                    MessageBox.Show("Erro ao carregar clientes: " & ex.Message)
-                End Try
-            End Using
-        End Using
-    End Sub
 End Class
