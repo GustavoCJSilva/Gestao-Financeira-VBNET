@@ -33,8 +33,6 @@ Partial Class CadastroProdutos
         Me.txtModelo = New System.Windows.Forms.TextBox()
         Me.txtMarca = New System.Windows.Forms.TextBox()
         Me.txtCategoria = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txtCodigoBarras = New System.Windows.Forms.TextBox()
         Me.txtCodigoSku = New System.Windows.Forms.TextBox()
@@ -43,6 +41,8 @@ Partial Class CadastroProdutos
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label30 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.btnVerProdutos = New System.Windows.Forms.Button()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.txtLocalizacao = New System.Windows.Forms.TextBox()
@@ -110,7 +110,7 @@ Partial Class CadastroProdutos
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VoltarToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(536, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(670, 24)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -127,7 +127,7 @@ Partial Class CadastroProdutos
         Me.Tabs.Location = New System.Drawing.Point(0, 24)
         Me.Tabs.Name = "Tabs"
         Me.Tabs.SelectedIndex = 0
-        Me.Tabs.Size = New System.Drawing.Size(536, 872)
+        Me.Tabs.Size = New System.Drawing.Size(670, 928)
         Me.Tabs.TabIndex = 2
         '
         'CadProd
@@ -136,7 +136,7 @@ Partial Class CadastroProdutos
         Me.CadProd.Location = New System.Drawing.Point(4, 22)
         Me.CadProd.Name = "CadProd"
         Me.CadProd.Padding = New System.Windows.Forms.Padding(3)
-        Me.CadProd.Size = New System.Drawing.Size(528, 846)
+        Me.CadProd.Size = New System.Drawing.Size(662, 902)
         Me.CadProd.TabIndex = 0
         Me.CadProd.Text = "Cadastrar Produto"
         Me.CadProd.UseVisualStyleBackColor = True
@@ -147,11 +147,11 @@ Partial Class CadastroProdutos
         Me.pnlConteudo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.pnlConteudo.Controls.Add(Me.Panel1)
         Me.pnlConteudo.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnlConteudo.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.pnlConteudo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.pnlConteudo.Location = New System.Drawing.Point(3, 3)
         Me.pnlConteudo.Name = "pnlConteudo"
         Me.pnlConteudo.Padding = New System.Windows.Forms.Padding(20)
-        Me.pnlConteudo.Size = New System.Drawing.Size(522, 840)
+        Me.pnlConteudo.Size = New System.Drawing.Size(656, 896)
         Me.pnlConteudo.TabIndex = 47
         '
         'Panel1
@@ -165,10 +165,10 @@ Partial Class CadastroProdutos
         Me.Panel1.Controls.Add(Me.TableLayoutPanel3)
         Me.Panel1.Controls.Add(Me.TableLayoutPanel4)
         Me.Panel1.Controls.Add(Me.TableLayoutPanel5)
-        Me.Panel1.Location = New System.Drawing.Point(13, 20)
+        Me.Panel1.Location = New System.Drawing.Point(5, 2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Padding = New System.Windows.Forms.Padding(16)
-        Me.Panel1.Size = New System.Drawing.Size(494, 795)
+        Me.Panel1.Size = New System.Drawing.Size(644, 890)
         Me.Panel1.TabIndex = 8
         '
         'btnSalvarProduto
@@ -176,7 +176,7 @@ Partial Class CadastroProdutos
         Me.btnSalvarProduto.BackColor = System.Drawing.SystemColors.MenuHighlight
         Me.btnSalvarProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSalvarProduto.ForeColor = System.Drawing.Color.White
-        Me.btnSalvarProduto.Location = New System.Drawing.Point(22, 742)
+        Me.btnSalvarProduto.Location = New System.Drawing.Point(19, 837)
         Me.btnSalvarProduto.Name = "btnSalvarProduto"
         Me.btnSalvarProduto.Size = New System.Drawing.Size(114, 34)
         Me.btnSalvarProduto.TabIndex = 8
@@ -189,12 +189,10 @@ Partial Class CadastroProdutos
         Me.TableLayoutPanel1.ColumnCount = 3
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.69512!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.30488!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 131.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 137.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.txtModelo, 2, 4)
         Me.TableLayoutPanel1.Controls.Add(Me.txtMarca, 1, 4)
         Me.TableLayoutPanel1.Controls.Add(Me.txtCategoria, 0, 4)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label4, 0, 3)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label5, 1, 3)
         Me.TableLayoutPanel1.Controls.Add(Me.Label6, 2, 3)
         Me.TableLayoutPanel1.Controls.Add(Me.txtCodigoBarras, 2, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.txtCodigoSku, 1, 2)
@@ -203,63 +201,47 @@ Partial Class CadastroProdutos
         Me.TableLayoutPanel1.Controls.Add(Me.Label2, 1, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Label3, 2, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Label30, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label4, 1, 3)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label5, 0, 3)
         Me.TableLayoutPanel1.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(19, 13)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 5
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 57.14286!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42.85714!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(450, 117)
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.52941!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.47059!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(606, 143)
         Me.TableLayoutPanel1.TabIndex = 0
         '
         'txtModelo
         '
-        Me.txtModelo.Location = New System.Drawing.Point(321, 93)
+        Me.txtModelo.Location = New System.Drawing.Point(471, 113)
         Me.txtModelo.Name = "txtModelo"
-        Me.txtModelo.Size = New System.Drawing.Size(100, 23)
+        Me.txtModelo.Size = New System.Drawing.Size(100, 29)
         Me.txtModelo.TabIndex = 15
         '
         'txtMarca
         '
-        Me.txtMarca.Location = New System.Drawing.Point(161, 93)
+        Me.txtMarca.Location = New System.Drawing.Point(236, 113)
         Me.txtMarca.Name = "txtMarca"
-        Me.txtMarca.Size = New System.Drawing.Size(100, 23)
+        Me.txtMarca.Size = New System.Drawing.Size(100, 29)
         Me.txtMarca.TabIndex = 14
         '
         'txtCategoria
         '
-        Me.txtCategoria.Location = New System.Drawing.Point(3, 93)
+        Me.txtCategoria.Location = New System.Drawing.Point(3, 113)
         Me.txtCategoria.Name = "txtCategoria"
-        Me.txtCategoria.Size = New System.Drawing.Size(100, 23)
+        Me.txtCategoria.Size = New System.Drawing.Size(100, 29)
         Me.txtCategoria.TabIndex = 13
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(3, 70)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(58, 15)
-        Me.Label4.TabIndex = 10
-        Me.Label4.Text = "Categoria"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(161, 70)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(40, 15)
-        Me.Label5.TabIndex = 11
-        Me.Label5.Text = "Marca"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(321, 70)
+        Me.Label6.Location = New System.Drawing.Point(471, 88)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(48, 15)
+        Me.Label6.Size = New System.Drawing.Size(63, 21)
         Me.Label6.TabIndex = 12
         Me.Label6.Text = "Modelo"
         '
@@ -267,26 +249,26 @@ Partial Class CadastroProdutos
         '
         Me.txtCodigoBarras.BackColor = System.Drawing.Color.White
         Me.txtCodigoBarras.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(55, Byte), Integer))
-        Me.txtCodigoBarras.Location = New System.Drawing.Point(321, 45)
+        Me.txtCodigoBarras.Location = New System.Drawing.Point(471, 52)
         Me.txtCodigoBarras.Name = "txtCodigoBarras"
-        Me.txtCodigoBarras.Size = New System.Drawing.Size(100, 23)
+        Me.txtCodigoBarras.Size = New System.Drawing.Size(100, 29)
         Me.txtCodigoBarras.TabIndex = 9
         '
         'txtCodigoSku
         '
         Me.txtCodigoSku.BackColor = System.Drawing.Color.White
-        Me.txtCodigoSku.Location = New System.Drawing.Point(161, 45)
+        Me.txtCodigoSku.Location = New System.Drawing.Point(236, 52)
         Me.txtCodigoSku.Name = "txtCodigoSku"
-        Me.txtCodigoSku.Size = New System.Drawing.Size(100, 23)
+        Me.txtCodigoSku.Size = New System.Drawing.Size(100, 29)
         Me.txtCodigoSku.TabIndex = 7
         '
         'txtNomeProduto
         '
         Me.txtNomeProduto.BackColor = System.Drawing.Color.White
         Me.txtNomeProduto.ForeColor = System.Drawing.SystemColors.MenuText
-        Me.txtNomeProduto.Location = New System.Drawing.Point(3, 45)
+        Me.txtNomeProduto.Location = New System.Drawing.Point(3, 52)
         Me.txtNomeProduto.Name = "txtNomeProduto"
-        Me.txtNomeProduto.Size = New System.Drawing.Size(100, 23)
+        Me.txtNomeProduto.Size = New System.Drawing.Size(100, 29)
         Me.txtNomeProduto.TabIndex = 5
         '
         'Label1
@@ -294,25 +276,25 @@ Partial Class CadastroProdutos
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(3, 24)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(103, 15)
+        Me.Label1.Size = New System.Drawing.Size(135, 21)
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "Nome do Produto"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(161, 24)
+        Me.Label2.Location = New System.Drawing.Point(236, 24)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(72, 15)
+        Me.Label2.Size = New System.Drawing.Size(95, 21)
         Me.Label2.TabIndex = 6
         Me.Label2.Text = "Código/SKU"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(321, 24)
+        Me.Label3.Location = New System.Drawing.Point(471, 24)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(97, 15)
+        Me.Label3.Size = New System.Drawing.Size(129, 21)
         Me.Label3.TabIndex = 8
         Me.Label3.Text = "Código de Barras"
         '
@@ -327,12 +309,31 @@ Partial Class CadastroProdutos
         Me.Label30.TabIndex = 16
         Me.Label30.Text = "📦 Informações Básicas"
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(236, 88)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(77, 21)
+        Me.Label4.TabIndex = 10
+        Me.Label4.Text = "Categoria"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(3, 88)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(53, 21)
+        Me.Label5.TabIndex = 11
+        Me.Label5.Text = "Marca"
+        '
         'btnVerProdutos
         '
         Me.btnVerProdutos.BackColor = System.Drawing.Color.White
-        Me.btnVerProdutos.Location = New System.Drawing.Point(351, 742)
+        Me.btnVerProdutos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnVerProdutos.Location = New System.Drawing.Point(507, 837)
         Me.btnVerProdutos.Name = "btnVerProdutos"
-        Me.btnVerProdutos.Size = New System.Drawing.Size(118, 23)
+        Me.btnVerProdutos.Size = New System.Drawing.Size(118, 34)
         Me.btnVerProdutos.TabIndex = 7
         Me.btnVerProdutos.Text = "Ver Produtos → 📋"
         Me.btnVerProdutos.UseVisualStyleBackColor = False
@@ -341,9 +342,9 @@ Partial Class CadastroProdutos
         '
         Me.TableLayoutPanel2.BackColor = System.Drawing.Color.White
         Me.TableLayoutPanel2.ColumnCount = 3
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 124.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.56897!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.43103!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 136.0!))
         Me.TableLayoutPanel2.Controls.Add(Me.txtLocalizacao, 0, 4)
         Me.TableLayoutPanel2.Controls.Add(Me.chkProdutoAtivo, 1, 4)
         Me.TableLayoutPanel2.Controls.Add(Me.Label11, 1, 3)
@@ -355,30 +356,30 @@ Partial Class CadastroProdutos
         Me.TableLayoutPanel2.Controls.Add(Me.txtUnidadeMedida, 2, 2)
         Me.TableLayoutPanel2.Controls.Add(Me.Label9, 2, 1)
         Me.TableLayoutPanel2.Controls.Add(Me.Label29, 0, 0)
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(19, 136)
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(19, 162)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 5
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.42857!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.57143!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.15385!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.84615!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28.0!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(450, 141)
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(606, 158)
         Me.TableLayoutPanel2.TabIndex = 1
         '
         'txtLocalizacao
         '
-        Me.txtLocalizacao.Location = New System.Drawing.Point(3, 106)
+        Me.txtLocalizacao.Location = New System.Drawing.Point(3, 123)
         Me.txtLocalizacao.Name = "txtLocalizacao"
-        Me.txtLocalizacao.Size = New System.Drawing.Size(100, 23)
+        Me.txtLocalizacao.Size = New System.Drawing.Size(100, 29)
         Me.txtLocalizacao.TabIndex = 7
         '
         'chkProdutoAtivo
         '
         Me.chkProdutoAtivo.AutoSize = True
-        Me.chkProdutoAtivo.Location = New System.Drawing.Point(166, 106)
+        Me.chkProdutoAtivo.Location = New System.Drawing.Point(235, 123)
         Me.chkProdutoAtivo.Name = "chkProdutoAtivo"
-        Me.chkProdutoAtivo.Size = New System.Drawing.Size(100, 19)
+        Me.chkProdutoAtivo.Size = New System.Drawing.Size(125, 25)
         Me.chkProdutoAtivo.TabIndex = 9
         Me.chkProdutoAtivo.Text = "Produto Ativo"
         Me.chkProdutoAtivo.UseVisualStyleBackColor = True
@@ -386,26 +387,26 @@ Partial Class CadastroProdutos
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(166, 81)
+        Me.Label11.Location = New System.Drawing.Point(235, 92)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(39, 15)
+        Me.Label11.Size = New System.Drawing.Size(52, 21)
         Me.Label11.TabIndex = 8
         Me.Label11.Text = "Status"
         '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(3, 81)
+        Me.Label10.Location = New System.Drawing.Point(3, 92)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(68, 15)
+        Me.Label10.Size = New System.Drawing.Size(89, 21)
         Me.Label10.TabIndex = 6
         Me.Label10.Text = "Localização"
         '
         'txtQuantidade
         '
-        Me.txtQuantidade.Location = New System.Drawing.Point(3, 49)
+        Me.txtQuantidade.Location = New System.Drawing.Point(3, 55)
         Me.txtQuantidade.Name = "txtQuantidade"
-        Me.txtQuantidade.Size = New System.Drawing.Size(100, 23)
+        Me.txtQuantidade.Size = New System.Drawing.Size(100, 29)
         Me.txtQuantidade.TabIndex = 1
         '
         'Label7
@@ -413,39 +414,39 @@ Partial Class CadastroProdutos
         Me.Label7.AutoSize = True
         Me.Label7.Location = New System.Drawing.Point(3, 24)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(69, 15)
+        Me.Label7.Size = New System.Drawing.Size(91, 21)
         Me.Label7.TabIndex = 0
         Me.Label7.Text = "Quantidade"
         '
         'txtEstoqueMinimo
         '
-        Me.txtEstoqueMinimo.Location = New System.Drawing.Point(166, 49)
+        Me.txtEstoqueMinimo.Location = New System.Drawing.Point(235, 55)
         Me.txtEstoqueMinimo.Name = "txtEstoqueMinimo"
-        Me.txtEstoqueMinimo.Size = New System.Drawing.Size(100, 23)
+        Me.txtEstoqueMinimo.Size = New System.Drawing.Size(100, 29)
         Me.txtEstoqueMinimo.TabIndex = 3
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(166, 24)
+        Me.Label8.Location = New System.Drawing.Point(235, 24)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(94, 15)
+        Me.Label8.Size = New System.Drawing.Size(123, 21)
         Me.Label8.TabIndex = 2
         Me.Label8.Text = "Estoque Mínimo"
         '
         'txtUnidadeMedida
         '
-        Me.txtUnidadeMedida.Location = New System.Drawing.Point(329, 49)
+        Me.txtUnidadeMedida.Location = New System.Drawing.Point(472, 55)
         Me.txtUnidadeMedida.Name = "txtUnidadeMedida"
-        Me.txtUnidadeMedida.Size = New System.Drawing.Size(100, 23)
+        Me.txtUnidadeMedida.Size = New System.Drawing.Size(100, 29)
         Me.txtUnidadeMedida.TabIndex = 5
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(329, 24)
+        Me.Label9.Location = New System.Drawing.Point(472, 24)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(110, 15)
+        Me.Label9.Size = New System.Drawing.Size(93, 28)
         Me.Label9.TabIndex = 4
         Me.Label9.Text = "Unidade de Medida"
         '
@@ -463,9 +464,10 @@ Partial Class CadastroProdutos
         'btnLimpar
         '
         Me.btnLimpar.BackColor = System.Drawing.Color.White
-        Me.btnLimpar.Location = New System.Drawing.Point(210, 742)
+        Me.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnLimpar.Location = New System.Drawing.Point(292, 837)
         Me.btnLimpar.Name = "btnLimpar"
-        Me.btnLimpar.Size = New System.Drawing.Size(84, 23)
+        Me.btnLimpar.Size = New System.Drawing.Size(84, 34)
         Me.btnLimpar.TabIndex = 6
         Me.btnLimpar.Text = "Limpar → 🧹"
         Me.btnLimpar.UseVisualStyleBackColor = False
@@ -474,9 +476,9 @@ Partial Class CadastroProdutos
         '
         Me.TableLayoutPanel3.BackColor = System.Drawing.Color.White
         Me.TableLayoutPanel3.ColumnCount = 3
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 124.0!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.56897!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.43103!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 136.0!))
         Me.TableLayoutPanel3.Controls.Add(Me.txtMargemLucro, 1, 4)
         Me.TableLayoutPanel3.Controls.Add(Me.txtDescontoMaximo, 0, 4)
         Me.TableLayoutPanel3.Controls.Add(Me.Label15, 0, 3)
@@ -488,94 +490,94 @@ Partial Class CadastroProdutos
         Me.TableLayoutPanel3.Controls.Add(Me.txtFrete, 2, 2)
         Me.TableLayoutPanel3.Controls.Add(Me.Label14, 2, 1)
         Me.TableLayoutPanel3.Controls.Add(Me.Label28, 0, 0)
-        Me.TableLayoutPanel3.Location = New System.Drawing.Point(19, 283)
+        Me.TableLayoutPanel3.Location = New System.Drawing.Point(19, 326)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
         Me.TableLayoutPanel3.RowCount = 5
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.84507!))
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 59.15493!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38.0!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21.0!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(450, 141)
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36.0!))
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(606, 176)
         Me.TableLayoutPanel3.TabIndex = 2
         '
         'txtMargemLucro
         '
-        Me.txtMargemLucro.Location = New System.Drawing.Point(166, 113)
+        Me.txtMargemLucro.Location = New System.Drawing.Point(235, 142)
         Me.txtMargemLucro.Name = "txtMargemLucro"
-        Me.txtMargemLucro.Size = New System.Drawing.Size(100, 23)
+        Me.txtMargemLucro.Size = New System.Drawing.Size(100, 29)
         Me.txtMargemLucro.TabIndex = 9
         '
         'txtDescontoMaximo
         '
-        Me.txtDescontoMaximo.Location = New System.Drawing.Point(3, 113)
+        Me.txtDescontoMaximo.Location = New System.Drawing.Point(3, 142)
         Me.txtDescontoMaximo.Name = "txtDescontoMaximo"
-        Me.txtDescontoMaximo.Size = New System.Drawing.Size(100, 23)
+        Me.txtDescontoMaximo.Size = New System.Drawing.Size(100, 29)
         Me.txtDescontoMaximo.TabIndex = 8
         '
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(3, 89)
+        Me.Label15.Location = New System.Drawing.Point(3, 112)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(103, 15)
+        Me.Label15.Size = New System.Drawing.Size(135, 21)
         Me.Label15.TabIndex = 3
         Me.Label15.Text = "Desconto Màximo"
         '
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(166, 89)
+        Me.Label16.Location = New System.Drawing.Point(235, 112)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(101, 15)
+        Me.Label16.Size = New System.Drawing.Size(133, 21)
         Me.Label16.TabIndex = 4
         Me.Label16.Text = "Margem de Lucro"
         '
         'txtPrecoCusto
         '
-        Me.txtPrecoCusto.Location = New System.Drawing.Point(3, 54)
+        Me.txtPrecoCusto.Location = New System.Drawing.Point(3, 70)
         Me.txtPrecoCusto.Name = "txtPrecoCusto"
-        Me.txtPrecoCusto.Size = New System.Drawing.Size(100, 23)
+        Me.txtPrecoCusto.Size = New System.Drawing.Size(100, 29)
         Me.txtPrecoCusto.TabIndex = 5
         '
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(3, 21)
+        Me.Label12.Location = New System.Drawing.Point(3, 27)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(87, 15)
+        Me.Label12.Size = New System.Drawing.Size(114, 21)
         Me.Label12.TabIndex = 0
         Me.Label12.Text = "Preço de Custo"
         '
         'txtPrecoVenda
         '
-        Me.txtPrecoVenda.Location = New System.Drawing.Point(166, 54)
+        Me.txtPrecoVenda.Location = New System.Drawing.Point(235, 70)
         Me.txtPrecoVenda.Name = "txtPrecoVenda"
-        Me.txtPrecoVenda.Size = New System.Drawing.Size(100, 23)
+        Me.txtPrecoVenda.Size = New System.Drawing.Size(100, 29)
         Me.txtPrecoVenda.TabIndex = 6
         '
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(166, 21)
+        Me.Label13.Location = New System.Drawing.Point(235, 27)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(88, 15)
+        Me.Label13.Size = New System.Drawing.Size(117, 21)
         Me.Label13.TabIndex = 1
         Me.Label13.Text = "Preço de Venda"
         '
         'txtFrete
         '
-        Me.txtFrete.Location = New System.Drawing.Point(329, 54)
+        Me.txtFrete.Location = New System.Drawing.Point(472, 70)
         Me.txtFrete.Name = "txtFrete"
-        Me.txtFrete.Size = New System.Drawing.Size(100, 23)
+        Me.txtFrete.Size = New System.Drawing.Size(100, 29)
         Me.txtFrete.TabIndex = 7
         '
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(329, 21)
+        Me.Label14.Location = New System.Drawing.Point(472, 27)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(33, 15)
+        Me.Label14.Size = New System.Drawing.Size(45, 21)
         Me.Label14.TabIndex = 2
         Me.Label14.Text = "Frete"
         '
@@ -594,9 +596,9 @@ Partial Class CadastroProdutos
         '
         Me.TableLayoutPanel4.BackColor = System.Drawing.Color.White
         Me.TableLayoutPanel4.ColumnCount = 3
-        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 124.0!))
+        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.56897!))
+        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.43103!))
+        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 135.0!))
         Me.TableLayoutPanel4.Controls.Add(Me.txtVoltagem, 1, 6)
         Me.TableLayoutPanel4.Controls.Add(Me.txtComponentes, 2, 6)
         Me.TableLayoutPanel4.Controls.Add(Me.txtMaterial, 0, 6)
@@ -616,7 +618,7 @@ Partial Class CadastroProdutos
         Me.TableLayoutPanel4.Controls.Add(Me.Label18, 1, 1)
         Me.TableLayoutPanel4.Controls.Add(Me.Label19, 2, 1)
         Me.TableLayoutPanel4.Controls.Add(Me.Label27, 0, 0)
-        Me.TableLayoutPanel4.Location = New System.Drawing.Point(19, 430)
+        Me.TableLayoutPanel4.Location = New System.Drawing.Point(19, 508)
         Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
         Me.TableLayoutPanel4.RowCount = 7
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.17391!))
@@ -626,150 +628,150 @@ Partial Class CadastroProdutos
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38.0!))
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28.0!))
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36.0!))
-        Me.TableLayoutPanel4.Size = New System.Drawing.Size(450, 217)
+        Me.TableLayoutPanel4.Size = New System.Drawing.Size(606, 235)
         Me.TableLayoutPanel4.TabIndex = 3
         '
         'txtVoltagem
         '
-        Me.txtVoltagem.Location = New System.Drawing.Point(166, 183)
+        Me.txtVoltagem.Location = New System.Drawing.Point(236, 201)
         Me.txtVoltagem.Name = "txtVoltagem"
-        Me.txtVoltagem.Size = New System.Drawing.Size(100, 23)
+        Me.txtVoltagem.Size = New System.Drawing.Size(100, 29)
         Me.txtVoltagem.TabIndex = 16
         '
         'txtComponentes
         '
-        Me.txtComponentes.Location = New System.Drawing.Point(329, 183)
+        Me.txtComponentes.Location = New System.Drawing.Point(473, 201)
         Me.txtComponentes.Name = "txtComponentes"
-        Me.txtComponentes.Size = New System.Drawing.Size(100, 23)
+        Me.txtComponentes.Size = New System.Drawing.Size(100, 29)
         Me.txtComponentes.TabIndex = 17
         '
         'txtMaterial
         '
-        Me.txtMaterial.Location = New System.Drawing.Point(3, 183)
+        Me.txtMaterial.Location = New System.Drawing.Point(3, 201)
         Me.txtMaterial.Name = "txtMaterial"
-        Me.txtMaterial.Size = New System.Drawing.Size(100, 23)
+        Me.txtMaterial.Size = New System.Drawing.Size(100, 29)
         Me.txtMaterial.TabIndex = 15
         '
         'Label23
         '
         Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(3, 152)
+        Me.Label23.Location = New System.Drawing.Point(3, 170)
         Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(50, 15)
+        Me.Label23.Size = New System.Drawing.Size(67, 21)
         Me.Label23.TabIndex = 6
         Me.Label23.Text = "Material"
         '
         'Label24
         '
         Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(166, 152)
+        Me.Label24.Location = New System.Drawing.Point(236, 170)
         Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(57, 15)
+        Me.Label24.Size = New System.Drawing.Size(76, 21)
         Me.Label24.TabIndex = 7
         Me.Label24.Text = "Voltagem"
         '
         'Label25
         '
         Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(329, 152)
+        Me.Label25.Location = New System.Drawing.Point(473, 170)
         Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(82, 15)
+        Me.Label25.Size = New System.Drawing.Size(107, 21)
         Me.Label25.TabIndex = 8
         Me.Label25.Text = "Componentes"
         '
         'txtCor
         '
-        Me.txtCor.Location = New System.Drawing.Point(329, 117)
+        Me.txtCor.Location = New System.Drawing.Point(473, 135)
         Me.txtCor.Name = "txtCor"
-        Me.txtCor.Size = New System.Drawing.Size(100, 23)
+        Me.txtCor.Size = New System.Drawing.Size(100, 29)
         Me.txtCor.TabIndex = 14
         '
         'txtTamanho
         '
-        Me.txtTamanho.Location = New System.Drawing.Point(166, 117)
+        Me.txtTamanho.Location = New System.Drawing.Point(236, 135)
         Me.txtTamanho.Name = "txtTamanho"
-        Me.txtTamanho.Size = New System.Drawing.Size(100, 23)
+        Me.txtTamanho.Size = New System.Drawing.Size(100, 29)
         Me.txtTamanho.TabIndex = 13
         '
         'txtComprimento
         '
-        Me.txtComprimento.Location = New System.Drawing.Point(3, 117)
+        Me.txtComprimento.Location = New System.Drawing.Point(3, 135)
         Me.txtComprimento.Name = "txtComprimento"
-        Me.txtComprimento.Size = New System.Drawing.Size(100, 23)
+        Me.txtComprimento.Size = New System.Drawing.Size(100, 29)
         Me.txtComprimento.TabIndex = 12
         '
         'Label20
         '
         Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(3, 87)
+        Me.Label20.Location = New System.Drawing.Point(3, 105)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(82, 15)
+        Me.Label20.Size = New System.Drawing.Size(107, 21)
         Me.Label20.TabIndex = 3
         Me.Label20.Text = "Comprimento"
         '
         'Label21
         '
         Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(166, 87)
+        Me.Label21.Location = New System.Drawing.Point(236, 105)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(57, 15)
+        Me.Label21.Size = New System.Drawing.Size(73, 21)
         Me.Label21.TabIndex = 4
         Me.Label21.Text = "Tamanho"
         '
         'Label22
         '
         Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(329, 87)
+        Me.Label22.Location = New System.Drawing.Point(473, 105)
         Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(26, 15)
+        Me.Label22.Size = New System.Drawing.Size(35, 21)
         Me.Label22.TabIndex = 5
         Me.Label22.Text = "Cor"
         '
         'txtLargura
         '
-        Me.txtLargura.Location = New System.Drawing.Point(329, 58)
+        Me.txtLargura.Location = New System.Drawing.Point(473, 76)
         Me.txtLargura.Name = "txtLargura"
-        Me.txtLargura.Size = New System.Drawing.Size(100, 23)
+        Me.txtLargura.Size = New System.Drawing.Size(100, 29)
         Me.txtLargura.TabIndex = 11
         '
         'txtAltura
         '
-        Me.txtAltura.Location = New System.Drawing.Point(166, 58)
+        Me.txtAltura.Location = New System.Drawing.Point(236, 76)
         Me.txtAltura.Name = "txtAltura"
-        Me.txtAltura.Size = New System.Drawing.Size(100, 23)
+        Me.txtAltura.Size = New System.Drawing.Size(100, 29)
         Me.txtAltura.TabIndex = 10
         '
         'txtPeso
         '
-        Me.txtPeso.Location = New System.Drawing.Point(3, 58)
+        Me.txtPeso.Location = New System.Drawing.Point(3, 76)
         Me.txtPeso.Name = "txtPeso"
-        Me.txtPeso.Size = New System.Drawing.Size(100, 23)
+        Me.txtPeso.Size = New System.Drawing.Size(100, 29)
         Me.txtPeso.TabIndex = 9
         '
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(3, 29)
+        Me.Label17.Location = New System.Drawing.Point(3, 38)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(32, 15)
+        Me.Label17.Size = New System.Drawing.Size(42, 21)
         Me.Label17.TabIndex = 0
         Me.Label17.Text = "Peso"
         '
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(166, 29)
+        Me.Label18.Location = New System.Drawing.Point(236, 38)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(39, 15)
+        Me.Label18.Size = New System.Drawing.Size(52, 21)
         Me.Label18.TabIndex = 1
         Me.Label18.Text = "Altura"
         '
         'Label19
         '
         Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(329, 29)
+        Me.Label19.Location = New System.Drawing.Point(473, 38)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(47, 15)
+        Me.Label19.Size = New System.Drawing.Size(64, 21)
         Me.Label19.TabIndex = 2
         Me.Label19.Text = "Largura"
         '
@@ -791,12 +793,12 @@ Partial Class CadastroProdutos
         Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel5.Controls.Add(Me.Label26, 0, 0)
         Me.TableLayoutPanel5.Controls.Add(Me.txtDescricao, 0, 1)
-        Me.TableLayoutPanel5.Location = New System.Drawing.Point(19, 654)
+        Me.TableLayoutPanel5.Location = New System.Drawing.Point(19, 749)
         Me.TableLayoutPanel5.Name = "TableLayoutPanel5"
         Me.TableLayoutPanel5.RowCount = 2
         Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64.0!))
-        Me.TableLayoutPanel5.Size = New System.Drawing.Size(450, 82)
+        Me.TableLayoutPanel5.Size = New System.Drawing.Size(606, 82)
         Me.TableLayoutPanel5.TabIndex = 4
         '
         'Label26
@@ -815,14 +817,14 @@ Partial Class CadastroProdutos
         Me.txtDescricao.Location = New System.Drawing.Point(3, 21)
         Me.txtDescricao.Multiline = True
         Me.txtDescricao.Name = "txtDescricao"
-        Me.txtDescricao.Size = New System.Drawing.Size(444, 58)
+        Me.txtDescricao.Size = New System.Drawing.Size(592, 58)
         Me.txtDescricao.TabIndex = 1
         '
         'CadastroProdutos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(536, 896)
+        Me.ClientSize = New System.Drawing.Size(670, 952)
         Me.Controls.Add(Me.Tabs)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1

@@ -75,13 +75,13 @@ Partial Class Menu
         'NovaVendaToolStripMenuItem
         '
         Me.NovaVendaToolStripMenuItem.Name = "NovaVendaToolStripMenuItem"
-        Me.NovaVendaToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.NovaVendaToolStripMenuItem.Size = New System.Drawing.Size(178, 22)
         Me.NovaVendaToolStripMenuItem.Text = "Nova Venda"
         '
         'HistóricoDeVendasToolStripMenuItem
         '
         Me.HistóricoDeVendasToolStripMenuItem.Name = "HistóricoDeVendasToolStripMenuItem"
-        Me.HistóricoDeVendasToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.HistóricoDeVendasToolStripMenuItem.Size = New System.Drawing.Size(178, 22)
         Me.HistóricoDeVendasToolStripMenuItem.Text = "Histórico de Vendas"
         '
         'ConsultasToolStripMenuItem
@@ -94,7 +94,7 @@ Partial Class Menu
         'ConsultarClientesToolStripMenuItem
         '
         Me.ConsultarClientesToolStripMenuItem.Name = "ConsultarClientesToolStripMenuItem"
-        Me.ConsultarClientesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ConsultarClientesToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
         Me.ConsultarClientesToolStripMenuItem.Text = "Consultar Clientes"
         '
         'PictureBox1
