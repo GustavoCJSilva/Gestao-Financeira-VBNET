@@ -182,7 +182,7 @@ Partial Class Nova_Venda
         Me.TableLayoutPanel2.ColumnCount = 3
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.21276!))
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.78724!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 393.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 394.0!))
         Me.TableLayoutPanel2.Controls.Add(Me.Label5, 0, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.Label6, 0, 1)
         Me.TableLayoutPanel2.Controls.Add(Me.Label7, 1, 1)
@@ -203,7 +203,7 @@ Partial Class Nova_Venda
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 65.0!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 54.0!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(1093, 257)
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(1093, 281)
         Me.TableLayoutPanel2.TabIndex = 2
         '
         'Label5
@@ -218,7 +218,7 @@ Partial Class Nova_Venda
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(3, 40)
+        Me.Label6.Location = New System.Drawing.Point(3, 50)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(66, 21)
         Me.Label6.TabIndex = 1
@@ -227,7 +227,7 @@ Partial Class Nova_Venda
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(354, 40)
+        Me.Label7.Location = New System.Drawing.Point(353, 50)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(60, 21)
         Me.Label7.TabIndex = 2
@@ -236,7 +236,7 @@ Partial Class Nova_Venda
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(702, 40)
+        Me.Label8.Location = New System.Drawing.Point(701, 50)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(91, 21)
         Me.Label8.TabIndex = 3
@@ -245,7 +245,7 @@ Partial Class Nova_Venda
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(3, 156)
+        Me.Label9.Location = New System.Drawing.Point(3, 180)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(109, 21)
         Me.Label9.TabIndex = 7
@@ -254,7 +254,7 @@ Partial Class Nova_Venda
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(354, 156)
+        Me.Label10.Location = New System.Drawing.Point(353, 180)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(75, 21)
         Me.Label10.TabIndex = 8
@@ -262,7 +262,7 @@ Partial Class Nova_Venda
         '
         'btnAdicionarProduto
         '
-        Me.btnAdicionarProduto.Location = New System.Drawing.Point(702, 213)
+        Me.btnAdicionarProduto.Location = New System.Drawing.Point(701, 237)
         Me.btnAdicionarProduto.Name = "btnAdicionarProduto"
         Me.btnAdicionarProduto.Size = New System.Drawing.Size(169, 37)
         Me.btnAdicionarProduto.TabIndex = 11
@@ -272,35 +272,35 @@ Partial Class Nova_Venda
         'cmbProduto
         '
         Me.cmbProduto.FormattingEnabled = True
-        Me.cmbProduto.Location = New System.Drawing.Point(3, 94)
+        Me.cmbProduto.Location = New System.Drawing.Point(3, 118)
         Me.cmbProduto.Name = "cmbProduto"
         Me.cmbProduto.Size = New System.Drawing.Size(121, 29)
         Me.cmbProduto.TabIndex = 12
         '
         'txtCodigoProduto
         '
-        Me.txtCodigoProduto.Location = New System.Drawing.Point(354, 94)
+        Me.txtCodigoProduto.Location = New System.Drawing.Point(353, 118)
         Me.txtCodigoProduto.Name = "txtCodigoProduto"
         Me.txtCodigoProduto.Size = New System.Drawing.Size(100, 29)
         Me.txtCodigoProduto.TabIndex = 13
         '
         'nudQuantidade
         '
-        Me.nudQuantidade.Location = New System.Drawing.Point(702, 94)
+        Me.nudQuantidade.Location = New System.Drawing.Point(701, 118)
         Me.nudQuantidade.Name = "nudQuantidade"
         Me.nudQuantidade.Size = New System.Drawing.Size(120, 29)
         Me.nudQuantidade.TabIndex = 14
         '
         'txtPrecoUnitario
         '
-        Me.txtPrecoUnitario.Location = New System.Drawing.Point(3, 213)
+        Me.txtPrecoUnitario.Location = New System.Drawing.Point(3, 237)
         Me.txtPrecoUnitario.Name = "txtPrecoUnitario"
         Me.txtPrecoUnitario.Size = New System.Drawing.Size(100, 29)
         Me.txtPrecoUnitario.TabIndex = 15
         '
         'txtDesconto
         '
-        Me.txtDesconto.Location = New System.Drawing.Point(354, 213)
+        Me.txtDesconto.Location = New System.Drawing.Point(353, 237)
         Me.txtDesconto.Name = "txtDesconto"
         Me.txtDesconto.Size = New System.Drawing.Size(100, 29)
         Me.txtDesconto.TabIndex = 16
@@ -312,12 +312,12 @@ Partial Class Nova_Venda
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel3.Controls.Add(Me.Label11, 0, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.dgvItensVenda, 0, 1)
-        Me.TableLayoutPanel3.Location = New System.Drawing.Point(23, 464)
+        Me.TableLayoutPanel3.Location = New System.Drawing.Point(23, 488)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
         Me.TableLayoutPanel3.RowCount = 2
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.0!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 72.0!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(1093, 131)
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.07216!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80.92783!))
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(1093, 170)
         Me.TableLayoutPanel3.TabIndex = 3
         '
         'Label11
@@ -333,9 +333,9 @@ Partial Class Nova_Venda
         '
         Me.dgvItensVenda.AllowUserToOrderColumns = True
         Me.dgvItensVenda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvItensVenda.Location = New System.Drawing.Point(3, 39)
+        Me.dgvItensVenda.Location = New System.Drawing.Point(3, 35)
         Me.dgvItensVenda.Name = "dgvItensVenda"
-        Me.dgvItensVenda.Size = New System.Drawing.Size(889, 89)
+        Me.dgvItensVenda.Size = New System.Drawing.Size(889, 132)
         Me.dgvItensVenda.TabIndex = 1
         '
         'TableLayoutPanel4
@@ -345,7 +345,7 @@ Partial Class Nova_Venda
         Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.72623!))
         Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.27377!))
         Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 245.0!))
-        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 251.0!))
+        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 252.0!))
         Me.TableLayoutPanel4.Controls.Add(Me.Label12, 0, 0)
         Me.TableLayoutPanel4.Controls.Add(Me.Label13, 0, 1)
         Me.TableLayoutPanel4.Controls.Add(Me.Label14, 1, 1)
@@ -355,7 +355,7 @@ Partial Class Nova_Venda
         Me.TableLayoutPanel4.Controls.Add(Me.txtDescontoTotal, 1, 2)
         Me.TableLayoutPanel4.Controls.Add(Me.txtTotalFinal, 2, 2)
         Me.TableLayoutPanel4.Controls.Add(Me.cmbFormaPagamento, 3, 2)
-        Me.TableLayoutPanel4.Location = New System.Drawing.Point(20, 601)
+        Me.TableLayoutPanel4.Location = New System.Drawing.Point(23, 661)
         Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
         Me.TableLayoutPanel4.RowCount = 3
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.80952!))
@@ -385,7 +385,7 @@ Partial Class Nova_Venda
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(264, 46)
+        Me.Label14.Location = New System.Drawing.Point(263, 46)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(111, 21)
         Me.Label14.TabIndex = 2
@@ -394,7 +394,7 @@ Partial Class Nova_Venda
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(599, 46)
+        Me.Label15.Location = New System.Drawing.Point(598, 46)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(79, 21)
         Me.Label15.TabIndex = 3
@@ -403,7 +403,7 @@ Partial Class Nova_Venda
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(844, 46)
+        Me.Label16.Location = New System.Drawing.Point(843, 46)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(158, 21)
         Me.Label16.TabIndex = 4
@@ -418,14 +418,14 @@ Partial Class Nova_Venda
         '
         'txtDescontoTotal
         '
-        Me.txtDescontoTotal.Location = New System.Drawing.Point(264, 97)
+        Me.txtDescontoTotal.Location = New System.Drawing.Point(263, 97)
         Me.txtDescontoTotal.Name = "txtDescontoTotal"
         Me.txtDescontoTotal.Size = New System.Drawing.Size(100, 29)
         Me.txtDescontoTotal.TabIndex = 6
         '
         'txtTotalFinal
         '
-        Me.txtTotalFinal.Location = New System.Drawing.Point(599, 97)
+        Me.txtTotalFinal.Location = New System.Drawing.Point(598, 97)
         Me.txtTotalFinal.Name = "txtTotalFinal"
         Me.txtTotalFinal.Size = New System.Drawing.Size(100, 29)
         Me.txtTotalFinal.TabIndex = 7
@@ -433,7 +433,7 @@ Partial Class Nova_Venda
         'cmbFormaPagamento
         '
         Me.cmbFormaPagamento.FormattingEnabled = True
-        Me.cmbFormaPagamento.Location = New System.Drawing.Point(844, 97)
+        Me.cmbFormaPagamento.Location = New System.Drawing.Point(843, 97)
         Me.cmbFormaPagamento.Name = "cmbFormaPagamento"
         Me.cmbFormaPagamento.Size = New System.Drawing.Size(106, 29)
         Me.cmbFormaPagamento.TabIndex = 8
@@ -442,7 +442,7 @@ Partial Class Nova_Venda
         '
         Me.btnCancelar.BackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCancelar.Location = New System.Drawing.Point(20, 756)
+        Me.btnCancelar.Location = New System.Drawing.Point(23, 820)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(266, 35)
         Me.btnCancelar.TabIndex = 5
@@ -453,7 +453,7 @@ Partial Class Nova_Venda
         '
         Me.btnLimpar.BackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnLimpar.Location = New System.Drawing.Point(438, 756)
+        Me.btnLimpar.Location = New System.Drawing.Point(441, 820)
         Me.btnLimpar.Name = "btnLimpar"
         Me.btnLimpar.Size = New System.Drawing.Size(266, 35)
         Me.btnLimpar.TabIndex = 6
@@ -465,7 +465,7 @@ Partial Class Nova_Venda
         Me.btnFinalizarVenda.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.btnFinalizarVenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnFinalizarVenda.ForeColor = System.Drawing.Color.White
-        Me.btnFinalizarVenda.Location = New System.Drawing.Point(847, 756)
+        Me.btnFinalizarVenda.Location = New System.Drawing.Point(850, 820)
         Me.btnFinalizarVenda.Name = "btnFinalizarVenda"
         Me.btnFinalizarVenda.Size = New System.Drawing.Size(266, 35)
         Me.btnFinalizarVenda.TabIndex = 7
@@ -484,7 +484,7 @@ Partial Class Nova_Venda
         Me.Panel1.Controls.Add(Me.TableLayoutPanel4)
         Me.Panel1.Location = New System.Drawing.Point(23, 37)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1139, 810)
+        Me.Panel1.Size = New System.Drawing.Size(1139, 877)
         Me.Panel1.TabIndex = 8
         '
         'Nova_Venda
@@ -492,7 +492,7 @@ Partial Class Nova_Venda
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 21.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(238, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1202, 880)
+        Me.ClientSize = New System.Drawing.Size(1202, 926)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
